@@ -20,8 +20,8 @@ export default function Home() {
         Nosso site de serviços de limpeza pós-obra está sendo preparado.
         Em breve você poderá conhecer todas as nossas soluções.
       </p>
-      <p className="mt-8 text-sm text-foreground/60">
-        Contato: (XX) XXXXX-XXXX
+      <p className="mt-8 text-sm text-slate-500">
+        Contato: (67) 9 9621-8497
       </p>
     </main>
   );
