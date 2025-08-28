@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen p-6 text-center">
       <Image
-        src="/renova-worker.svg"
+        src="/renova.png"
         alt="Mascote da Renova operando máquina de limpeza"
         width={260}
         height={260}
