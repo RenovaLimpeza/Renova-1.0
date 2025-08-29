@@ -1,0 +1,112 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { WhatsAppButton } from ".";
+import { useState } from "react";
+
+export interface NavLink {
+  href: string;
+  label: string;
+}
+
+interface NavbarProps {
+  links: NavLink[];
+  cta?: NavLink;
+}
+
+export default function Navbar({ links, cta }: NavbarProps) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <header className="sticky top-0 z-50 bg-background text-foreground drop-shadow-[0_2px_6px_rgba(0,0,0,0.15)]">
+      <nav className="mx-auto flex items-center justify-between p-4 max-w-7xl">
+        <Link href="/" className="flex items-center gap-2">
+          <Image src="/logo-navbar.png" alt="Renova" width={150} height={150} />
+        </Link>
+        <div className="flex items-center gap-6">
+          <ul className="hidden sm:flex gap-6">
+            {links.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="text-foreground hover:text-yellow-400 transition-colors"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          {cta && (
+            <WhatsAppButton
+              type="orcamento"
+              label={cta.label}
+              unstyled
+              className="hidden sm:block bg-yellow-400 text-slate-900 font-semibold px-4 py-2 rounded hover:bg-yellow-300 transition-colors"
+            />
+          )}
+          <button
+            className="sm:hidden p-2"
+            onClick={() => setOpen(!open)}
+            aria-label="Abrir menu"
+          >
+            {open ? <CloseIcon /> : <MenuIcon />}
+          </button>
+        </div>
+      </nav>
+      {open && (
+        <ul className="sm:hidden flex flex-col gap-4 p-4 border-t border-foreground/10">
+          {links.map((link) => (
+            <li key={link.href}>
+              <Link
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="block w-full py-2"
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
+          {cta && (
+            <li>
+              <WhatsAppButton
+                type="orcamento"
+                label={cta.label}
+                unstyled
+                className="block w-full py-2 text-center bg-yellow-400 text-slate-900 font-semibold rounded hover:bg-yellow-300 transition-colors"
+              />
+            </li>
+          )}
+        </ul>
+      )}
+    </header>
+  );
+}
+
+function MenuIcon() {
+  return (
+    <svg
+      className="w-6 h-6"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  );
+}
+
+function CloseIcon() {
+  return (
+    <svg
+      className="w-6 h-6"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  );
+}
