@@ -19,7 +19,7 @@ export default function Navbar({ links, cta }: NavbarProps) {
   const [open, setOpen] = useState(false);
 
   return (
-<header className="bg-background text-foreground drop-shadow-[0_2px_6px_rgba(0,0,0,0.15)]">
+    <header className="sticky top-0 z-50 bg-background text-foreground drop-shadow-[0_2px_6px_rgba(0,0,0,0.15)]">
       <nav className="mx-auto flex items-center justify-between p-4 max-w-7xl">
         <Link href="/" className="flex items-center gap-2">
           <Image src="/logo-navbar.png" alt="Renova" width={150} height={150} />
