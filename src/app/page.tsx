@@ -3,16 +3,13 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen p-6 text-center bg-background text-foreground">
-      <picture>
-        <source srcSet="/renova-dark.png" media="(prefers-color-scheme: dark)" />
-        <Image
-          src="/renova.png"
-          alt="Mascote da Renova operando máquina de limpeza"
-          width={260}
-          height={260}
-          priority
-        />
-      </picture>
+      <Image
+        src="/renova.png"
+        alt="Mascote da Renova operando máquina de limpeza"
+        width={260}
+        height={260}
+        priority
+      />
       <h1 className="mt-6 text-4xl font-bold">
         Estamos em produção
       </h1>

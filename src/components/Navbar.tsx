@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -10,36 +11,48 @@ export interface NavLink {
 
 interface NavbarProps {
   links: NavLink[];
+  cta?: NavLink;
 }
 
-export default function Navbar({ links }: NavbarProps) {
+export default function Navbar({ links, cta }: NavbarProps) {
   const [open, setOpen] = useState(false);
 
   return (
     <header className="bg-background text-foreground shadow-sm">
       <nav className="mx-auto flex items-center justify-between p-4 max-w-7xl">
-        <Link href="/" className="text-xl font-bold">
-          Renova
+        <Link href="/" className="flex items-center gap-2">
+          <Image src="/renova.png" alt="Renova" width={40} height={40} />
+          <span className="font-bold">RENOVA</span>
         </Link>
-        <button
-          className="sm:hidden p-2"
-          onClick={() => setOpen(!open)}
-          aria-label="Abrir menu"
-        >
-          {open ? <CloseIcon /> : <MenuIcon />}
-        </button>
-        <ul className="hidden sm:flex gap-6">
-          {links.map((link) => (
-            <li key={link.href}>
-              <Link
-                href={link.href}
-                className="hover:text-foreground/70 transition-colors"
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className="flex items-center gap-6">
+          <ul className="hidden sm:flex gap-6">
+            {links.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="hover:text-foreground/70 transition-colors"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          {cta && (
+            <Link
+              href={cta.href}
+              className="hidden sm:block bg-yellow-400 text-slate-900 font-semibold px-4 py-2 rounded hover:bg-yellow-300 transition-colors"
+            >
+              {cta.label}
+            </Link>
+          )}
+          <button
+            className="sm:hidden p-2"
+            onClick={() => setOpen(!open)}
+            aria-label="Abrir menu"
+          >
+            {open ? <CloseIcon /> : <MenuIcon />}
+          </button>
+        </div>
       </nav>
       {open && (
         <ul className="sm:hidden flex flex-col gap-4 p-4 border-t border-foreground/10">
@@ -54,6 +67,17 @@ export default function Navbar({ links }: NavbarProps) {
               </Link>
             </li>
           ))}
+          {cta && (
+            <li>
+              <Link
+                href={cta.href}
+                onClick={() => setOpen(false)}
+                className="block w-full py-2 text-center bg-yellow-400 text-slate-900 font-semibold rounded hover:bg-yellow-300 transition-colors"
+              >
+                {cta.label}
+              </Link>
+            </li>
+          )}
         </ul>
       )}
     </header>
