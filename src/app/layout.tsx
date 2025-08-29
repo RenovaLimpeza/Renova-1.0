@@ -11,8 +11,7 @@ const geistSans = Geist({
 const navLinks: NavLink[] = [
   { href: "#sobre", label: "Sobre nós" },
   { href: "#servicos", label: "Serviços" },
-  { href: "#metodologia", label: "Metodologia" },
-  { href: "#depoimentos", label: "Depoimentos" },
+  { href: "#mentoria", label: "Mentoria" },
   { href: "#contato", label: "Contato" },
 ];
 

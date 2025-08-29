@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { WhatsAppButton } from ".";
 import { useState } from "react";
 
 export interface NavLink {
@@ -18,11 +19,10 @@ export default function Navbar({ links, cta }: NavbarProps) {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="bg-background text-foreground shadow-sm">
+<header className="bg-background text-foreground drop-shadow-[0_2px_6px_rgba(0,0,0,0.15)]">
       <nav className="mx-auto flex items-center justify-between p-4 max-w-7xl">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/renova.png" alt="Renova" width={40} height={40} />
-          <span className="font-bold">RENOVA</span>
+          <Image src="/logo-navbar.png" alt="Renova" width={150} height={150} />
         </Link>
         <div className="flex items-center gap-6">
           <ul className="hidden sm:flex gap-6">
@@ -30,7 +30,7 @@ export default function Navbar({ links, cta }: NavbarProps) {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="hover:text-foreground/70 transition-colors"
+                  className="text-foreground hover:text-yellow-400 transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -38,12 +38,12 @@ export default function Navbar({ links, cta }: NavbarProps) {
             ))}
           </ul>
           {cta && (
-            <Link
-              href={cta.href}
+            <WhatsAppButton
+              type="orcamento"
+              label={cta.label}
+              unstyled
               className="hidden sm:block bg-yellow-400 text-slate-900 font-semibold px-4 py-2 rounded hover:bg-yellow-300 transition-colors"
-            >
-              {cta.label}
-            </Link>
+            />
           )}
           <button
             className="sm:hidden p-2"
@@ -69,13 +69,12 @@ export default function Navbar({ links, cta }: NavbarProps) {
           ))}
           {cta && (
             <li>
-              <Link
-                href={cta.href}
-                onClick={() => setOpen(false)}
+              <WhatsAppButton
+                type="orcamento"
+                label={cta.label}
+                unstyled
                 className="block w-full py-2 text-center bg-yellow-400 text-slate-900 font-semibold rounded hover:bg-yellow-300 transition-colors"
-              >
-                {cta.label}
-              </Link>
+              />
             </li>
           )}
         </ul>
