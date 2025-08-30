@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BotaoWhatsApp } from ".";
 
 interface MentoriaSectionProps {
   id?: string;
@@ -49,13 +50,12 @@ export default function Mentoria({
               {description}
             </p>
             <div className="mt-8">
-              <a
-                href={ctaHref}
+              <BotaoWhatsApp
+                type="mentoria"
+                label={ctaLabel}
+                unstyled
                 className="inline-flex items-center justify-center rounded-md bg-foreground px-5 py-3 font-semibold text-white transition-colors hover:bg-foreground/90"
-                aria-label="Abrir seção de contato para mentoria"
-              >
-                {ctaLabel}
-              </a>
+              />
             </div>
           </div>
         </div>

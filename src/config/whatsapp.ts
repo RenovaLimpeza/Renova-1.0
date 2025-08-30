@@ -1,4 +1,4 @@
-export type WhatsAppMessageType = "orcamento" | "informacoes";
+export type WhatsAppMessageType = "orcamento" | "informacoes" | "mentoria";
 
 export const WHATSAPP_CONFIG = {
   // Use somente números com DDI e DDD (ex: 55 + DDD + número)
@@ -6,6 +6,7 @@ export const WHATSAPP_CONFIG = {
   messages: {
     orcamento: "Olá, gostaria de solicitar um orçamento",
     informacoes: "Olá, gostaria de mais informações sobre os serviços",
+    mentoria: "Olá, gostaria de saber mais sobre a mentoria",
   },
 } as const;
 
