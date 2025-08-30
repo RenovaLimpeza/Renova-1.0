@@ -18,15 +18,15 @@ export default function Servicos({
   services = [
     {
       title: "Limpeza de Vidros",
-      description: "Limpamos vidros, janelas e fachadas com brilho e segurança.",
+      description: "A limpeza de vidros exige técnica e cuidado, e nosso serviço especializado garante um acabamento impecável em janelas e fachadas, utilizando produtos de alta qualidade e equipamentos adequados para cada tipo de superfície. Além disso, oferecemos restauração de vidros, recuperando a transparência e eliminando manchas ou marcas que comprometem a estética, e aplicamos hipermeabilização, criando uma camada protetora que reduz o acúmulo de sujeira, facilita a manutenção e prolonga a vida útil dos vidros.",
     },
     {
       title: "Limpeza Pós-Obra",
-      description: "Remoção de resíduos e pó para entregar o ambiente pronto.",
+      description: "Seja após uma reforma ou construção, nossa equipe está preparada para deixar tudo limpo e organizado. Utilizamos equipamentos e produtos específicos para eliminar toda a sujeira e resíduos, garantindo um ambiente pronto para uso com o mínimo de transtorno.",
     },
     {
       title: "Limpeza de Pisos",
-      description: "Higienização e cuidado com pisos para durabilidade e aparência.",
+      description: "Tratamos pisos de todos os tipos, desde cerâmicas e porcelanatos até mármores e granitos. Nosso serviço inclui polimento, raspagem e enceramento, com técnicas especializadas para restaurar a aparência original e prolongar a durabilidade do seu piso.",
     },
   ],
 }: ServicosProps) {

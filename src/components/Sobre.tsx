@@ -8,7 +8,7 @@ export default function Sobre({
   id = "about",
   title = "Sobre Nós",
   description =
-    "Somos uma empresa de limpeza profissional especializada em limpeza pós-obra, limpeza de vidros e limpeza de pisos. Atuamos com qualidade, pontualidade e atenção aos detalhes para conquistar a sua confiança.",
+    "A Renova é uma empresa especializada em limpeza profissional, oferecendo soluções inovadoras tanto para residências quanto para empresas. Com um compromisso constante com a qualidade e a satisfação de nossos clientes, nossa equipe é formada por profissionais altamente treinados, equipados com materiais e técnicas de ponta. Garantimos um serviço eficiente, que atende às suas necessidades com flexibilidade e precisão.",
 }: SobreProps) {
   return (
     <section id={id} className="bg-white py-16 sm:py-20">

@@ -9,8 +9,8 @@ interface HeroProps {
 }
 
 export default function Hero({
-  title = "Limpeza Qualidade e Confiança",
-  description = "Especialistas em limpeza pós-obra, vidros e pisos. Também realizamos restauração e hipermeabilização, garantindo ambientes renovados, protegidos e impecáveis.",
+  title = "Limpeza Profissional de Qualidade para Sua Casa e Empresa",
+  description = "Na Renova, oferecemos um serviço completo de limpeza, com técnicas especializadas e materiais de alta qualidade. Atendemos tanto residências quanto empresas, garantindo resultados excepcionais, com preços justos e um atendimento personalizado.",
   ctaLabel = "Solicitar Orçamento",
 }: HeroProps) {
   return (
