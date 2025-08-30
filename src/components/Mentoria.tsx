@@ -25,7 +25,6 @@ export default function Mentoria({
     <section id={id} className="bg-[#EFF5FF] py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
-          {/* Left: Image */}
           <div className="order-1 lg:order-1 flex justify-center">
             <div className="relative inline-block rounded-full p-[4px] bg-gradient-to-br from-yellow-400 to-transparent">
               <div className="rounded-full bg-white">
@@ -41,7 +40,6 @@ export default function Mentoria({
             </div>
           </div>
 
-          {/* Right: Text + CTA centralizado */}
           <div className="order-2 lg:order-2 flex flex-col items-center text-center gap-10">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               {title}

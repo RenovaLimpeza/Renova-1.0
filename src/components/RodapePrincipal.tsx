@@ -18,7 +18,6 @@ export default function RodapePrincipal({
     <section id={id} className="bg-[#163558]">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center">
-          {/* Left: Image (desktop) / after text (mobile) */}
           <div className="order-2 lg:order-1 flex justify-center">
             <div className="relative w-48 h-48 sm:w-64 sm:h-64">
               <Image
@@ -32,7 +31,6 @@ export default function RodapePrincipal({
             </div>
           </div>
 
-          {/* Right: Title + CTA */}
           <div className="order-1 lg:order-2 flex flex-col items-center text-center lg:items-start lg:text-left">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               {title}

@@ -10,7 +10,7 @@ interface HeroProps {
 
 export default function Hero({
   title = "Limpeza Qualidade e Confiança",
-  description = "Um parágrafo curto descrevendo o benefício/valor. Escreva de forma clara e direta para que as pessoas entendam rapidamente o que você oferece.",
+  description = "Especialistas em limpeza pós-obra, vidros e pisos. Também realizamos restauração e hipermeabilização, garantindo ambientes renovados, protegidos e impecáveis.",
   ctaLabel = "Solicitar Orçamento",
 }: HeroProps) {
   return (
@@ -18,7 +18,6 @@ export default function Hero({
       <div className="mx-auto max-w-7xl px-6 py-16 sm:py-12 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-y-12 gap-x-30 lg:grid-cols-12">
           
-          {/* Left: conteúdo */}
           <div className="lg:col-span-6 xl:col-span-6">
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
               {title}
@@ -34,7 +33,6 @@ export default function Hero({
             </div>
           </div>
 
-          {/* Right: imagem */}
           <div className="lg:col-span-6 xl:col-span-6 flex justify-center">
             <Image
               src="/logo-completa.png"

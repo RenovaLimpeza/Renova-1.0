@@ -22,7 +22,6 @@ export default function RodapeFinal({
   return (
     <footer id={id} className="bg-[#101828] ">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 md:grid-cols-3">
-        {/* Coluna 1: Logo */}
         <div className="flex justify-center md:justify-start">
           <Image
             src={logoSrc}
@@ -34,14 +33,12 @@ export default function RodapeFinal({
           />
         </div>
 
-        {/* Coluna 2: Contato */}
         <div className="text-center text-white">
           <p className="font-semibold">Contato</p>
           <p className="mt-1 opacity-90">{phone}</p>
           <p className="opacity-90">{email}</p>
         </div>
 
-        {/* Coluna 3: Redes sociais */}
         <div className="flex items-center justify-center gap-6 md:justify-end">
           <a
             href={instagramUrl}
