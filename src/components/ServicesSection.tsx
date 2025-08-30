@@ -15,7 +15,6 @@ interface ServicesSectionProps {
 
 export default function ServicesSection({
   id = "servicos",
-  title = "Nossos Serviços",
   services = [
     {
       title: "Vidros",
@@ -40,14 +39,8 @@ export default function ServicesSection({
     "/icone-piso.png",
   ];
   return (
-    <section id={id} className="bg-[#FFF9E6] py-16 sm:py-20">
+    <section id={id} className="bg-[#FFF9E6] py-16 sm:py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            {title}
-          </h2>
-        </div>
-
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
           {services.map((item, idx) => (
             <div key={idx} className="h-full">
