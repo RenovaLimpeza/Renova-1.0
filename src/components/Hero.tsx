@@ -20,10 +20,10 @@ export default function Hero({
           
           {/* Left: conteúdo */}
           <div className="lg:col-span-6 xl:col-span-6">
-            <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
               {title}
             </h1>
-            <p className="mt-6 text-lg leading-8 text-slate-600">{description}</p>
+            <p className="mt-6 text-lg leading-8 text-foreground/80">{description}</p>
             <div className="mt-8">
               <WhatsAppButton
                 type="orcamento"
