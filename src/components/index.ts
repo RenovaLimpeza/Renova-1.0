@@ -1,7 +1,11 @@
 export { default as Navbar } from "./Navbar";
 export type { NavLink } from "./Navbar";
 export { default as Hero } from "./Hero";
-export { default as WhatsAppButton } from "./WhatsAppButton";
-export { default as AboutSection } from "./AboutSection";
-export { default as ServicesSection } from "./ServicesSection";
-export { default as ServiceGallerySection } from "./ServiceGallerySection";
+export { default as BotaoWhatsApp } from "./BotaoWhatsApp";
+export { default as WhatsAppButton } from "./BotaoWhatsApp";
+export { default as Sobre } from "./Sobre";
+export { default as Servicos } from "./Servicos";
+export { default as GaleriaServicos } from "./GaleriaServicos";
+export { default as Mentoria } from "./Mentoria";
+export { default as RodapePrincipal } from "./RodapePrincipal";
+export { default as RodapeFinal } from "./RodapeFinal";

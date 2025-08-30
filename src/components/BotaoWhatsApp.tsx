@@ -8,7 +8,7 @@ type WhatsAppButtonProps = {
   unstyled?: boolean; // opcional: renderiza sem estilos base
 };
 
-export default function WhatsAppButton({ type, label, className, unstyled }: WhatsAppButtonProps) {
+export default function BotaoWhatsApp({ type, label, className, unstyled }: WhatsAppButtonProps) {
   const href = buildWhatsAppLink(type);
 
   const baseClasses =
@@ -19,6 +19,8 @@ export default function WhatsAppButton({ type, label, className, unstyled }: Wha
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label={label}
+      title={label}
       className={unstyled ? (className ?? "") : className ? `${baseClasses} ${className}` : baseClasses}
     >
       {label}

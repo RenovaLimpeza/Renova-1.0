@@ -3,6 +3,13 @@
 :root {
   --background: #ffffff;
   --foreground: #163558;
+  --nav-h: 64px;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --nav-h: 80px;
+  }
 }
 
 @theme inline {
@@ -11,9 +18,13 @@
   --font-sans: var(--font-poppins);
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-h);
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-poppins), sans-serif;
 }
-
