@@ -12,7 +12,7 @@ export default function RodapePrincipal({
   id = "orcamento",
   title = "Pronto para transformar seu espaço?",
   imageSrc = "/logo-menor.png",
-  imageAlt = "Imagem ilustrativa",
+  imageAlt = "Solicite orçamento de limpeza profissional - Renova",
 }: RodapePrincipalProps) {
   return (
     <section id={id} className="bg-[#163558]">

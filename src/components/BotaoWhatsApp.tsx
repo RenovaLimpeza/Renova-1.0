@@ -19,6 +19,8 @@ export default function BotaoWhatsApp({ type, label, className, unstyled }: What
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label={label}
+      title={label}
       className={unstyled ? (className ?? "") : className ? `${baseClasses} ${className}` : baseClasses}
     >
       {label}

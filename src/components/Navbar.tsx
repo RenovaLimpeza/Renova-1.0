@@ -36,7 +36,10 @@ export default function Navbar({ links, cta }: NavbarProps) {
           : "bg-background",
       ].join(" ")}
     >
-      <nav className="mx-auto flex h-full items-center justify-between px-4 max-w-7xl text-foreground">
+      <nav
+        className="mx-auto flex h-full items-center justify-between px-4 max-w-7xl text-foreground"
+        aria-label="Navegação principal"
+      >
         <Link href="/" className="flex items-center gap-2">
           <Image
             src="/logo-navbar.png"

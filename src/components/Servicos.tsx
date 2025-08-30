@@ -17,19 +17,16 @@ export default function Servicos({
   id = "servicos",
   services = [
     {
-      title: "Vidros",
-      description:
-        "Limpeza completa após reforma ou construção, cuidando de cada detalhe.",
+      title: "Limpeza de Vidros",
+      description: "Limpamos vidros, janelas e fachadas com brilho e segurança.",
     },
     {
-      title: "Pós-obra",
-      description:
-        "Cuidado periódico e detalhado para manter sua casa impecável.",
+      title: "Limpeza Pós-Obra",
+      description: "Remoção de resíduos e pó para entregar o ambiente pronto.",
     },
     {
-      title: "Pisos",
-      description:
-        "Ambientes de trabalho limpos e organizados para sua equipe.",
+      title: "Limpeza de Pisos",
+      description: "Higienização e cuidado com pisos para durabilidade e aparência.",
     },
   ],
 }: ServicosProps) {
@@ -41,6 +38,9 @@ export default function Servicos({
   return (
     <section id={id} className="bg-[#FFF9E6] py-16 sm:py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <h2 className="text-center text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          Serviços de Limpeza Profissional: Pós-Obra, Vidros e Pisos
+        </h2>
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
           {services.map((item, idx) => (
             <div key={idx} className="h-full">

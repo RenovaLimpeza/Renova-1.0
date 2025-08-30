@@ -25,7 +25,7 @@ interface ServiceGallerySectionProps {
 
 export default function GaleriaServicos({
   id = "services",
-    title = "Nossos Serviços",
+    title = "Nossos Serviços de Limpeza",
     instagramUrl = "https://www.instagram.com/renovapisos.cg/",
     items = [
         {
@@ -33,8 +33,8 @@ export default function GaleriaServicos({
             alt: "Limpeza de janelas",
             description: "Limpeza de vidros e janelas com acabamento impecável.",
             images: [
-                { src: "/servicos/calcada-antes.jpeg", alt: "Antes da limpeza" },
-                { src: "/servicos/calcada-depois.jpeg", alt: "Depois da limpeza" },
+                { src: "/services/calcada-antes.jpeg", alt: "Antes da limpeza" },
+                { src: "/services/calcada-depois.jpeg", alt: "Depois da limpeza" },
             ],
         },
         {

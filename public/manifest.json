@@ -1,0 +1,13 @@
+{
+  "name": "Renova",
+  "short_name": "Renova",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#163558",
+  "description": "Limpeza pós-obra, residencial e comercial com qualidade.",
+  "icons": [
+    { "src": "/favicon.ico", "sizes": "any", "type": "image/x-icon" }
+  ]
+}
+

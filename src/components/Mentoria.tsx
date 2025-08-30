@@ -12,13 +12,13 @@ interface MentoriaSectionProps {
 
 export default function Mentoria({
   id = "mentoria",
-  title = "Mentoria Exclusiva",
+  title = "Mentoria em Limpeza Profissional",
   description =
-    "Aprimore seus processos de limpeza com orientação prática e personalizada. Estruturamos rotinas, padronizamos procedimentos e ajudamos sua equipe a alcançar resultados consistentes com eficiência.",
+    "Aprimore seus processos de limpeza profissional com orientação personalizada. Padronizamos procedimentos, organizamos rotinas e capacitamos sua equipe para resultados consistentes.",
   ctaLabel = "Participar da mentoria!",
   ctaHref = "#contato",
   imageSrc = "/mentoria.png",
-  imageAlt = "Imagem ilustrativa de mentoria",
+  imageAlt = "Mentoria em limpeza profissional Renova",
 }: MentoriaSectionProps) {
   return (
     <section id={id} className="bg-[#EFF5FF] py-16 sm:py-20">
@@ -52,6 +52,7 @@ export default function Mentoria({
               <a
                 href={ctaHref}
                 className="inline-flex items-center justify-center rounded-md bg-foreground px-5 py-3 font-semibold text-white transition-colors hover:bg-foreground/90"
+                aria-label="Abrir seção de contato para mentoria"
               >
                 {ctaLabel}
               </a>
@@ -62,3 +63,4 @@ export default function Mentoria({
     </section>
   );
 }
+

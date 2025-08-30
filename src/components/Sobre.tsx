@@ -8,7 +8,7 @@ export default function Sobre({
   id = "about",
   title = "Sobre Nós",
   description =
-    "Somos uma equipe dedicada a entregar serviços com qualidade, confiança e atenção aos detalhes. Trabalhamos com processos claros, prazos bem definidos e um compromisso real com a satisfação de cada cliente.",
+    "Somos uma empresa de limpeza profissional especializada em limpeza pós-obra, limpeza de vidros e limpeza de pisos. Atuamos com qualidade, pontualidade e atenção aos detalhes para conquistar a sua confiança.",
 }: SobreProps) {
   return (
     <section id={id} className="bg-white py-16 sm:py-20">
