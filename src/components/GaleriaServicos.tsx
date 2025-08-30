@@ -72,6 +72,8 @@ export default function GaleriaServicos({
                         href={instagramUrl}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label="Abrir o Instagram da Renova em nova aba"
+                        title="Ver mais no Instagram"
                         className="inline-flex items-center justify-center rounded-md bg-yellow-400 px-5 py-2.5 font-semibold text-foreground transition-colors hover:bg-yellow-300"
                     >
                         Ver mais
