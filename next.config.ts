@@ -10,7 +10,7 @@ const securityHeaders = (): { key: string; value: string }[] => {
     "style-src 'self' 'unsafe-inline'",
     "img-src 'self' data: blob:",
     "font-src 'self' data:",
-    "connect-src 'self' https:",
+    "connect-src 'self' https: wss:",
     "frame-ancestors 'none'",
     "form-action 'self'",
     "base-uri 'self'",

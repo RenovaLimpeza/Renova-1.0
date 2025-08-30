@@ -5,11 +5,22 @@ const RATE_LIMIT_MAX = 100; // requests
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000; // 10 minutes
 const hits = new Map<string, { count: number; start: number }>();
 
+function getClientIp(req: NextRequest): string {
+  // Standard proxies send a comma-separated list; first is the client IP
+  const xff = req.headers.get("x-forwarded-for");
+  if (xff) return xff.split(",")[0].trim();
+  const realIp = req.headers.get("x-real-ip");
+  if (realIp) return realIp.trim();
+  const cf = req.headers.get("cf-connecting-ip");
+  if (cf) return cf.trim();
+  return "unknown";
+}
+
 export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
   if (pathname.startsWith("/api/")) {
-    const ip = req.ip || req.headers.get("x-forwarded-for") || "unknown";
+    const ip = getClientIp(req);
     const now = Date.now();
     const rec = hits.get(ip as string);
     if (!rec || now - rec.start > RATE_LIMIT_WINDOW_MS) {
@@ -28,4 +39,3 @@ export function middleware(req: NextRequest) {
 export const config = {
   matcher: ["/api/:path*"],
 };
-
