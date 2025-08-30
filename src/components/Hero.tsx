@@ -9,7 +9,7 @@ interface HeroProps {
 }
 
 export default function Hero({
-  title = "Limpeza Pós-Obra com Qualidade e Confiança",
+  title = "Limpeza Qualidade e Confiança",
   description = "Um parágrafo curto descrevendo o benefício/valor. Escreva de forma clara e direta para que as pessoas entendam rapidamente o que você oferece.",
   ctaLabel = "Solicitar Orçamento",
 }: HeroProps) {

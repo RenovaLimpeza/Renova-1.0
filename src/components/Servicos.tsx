@@ -7,13 +7,13 @@ interface ServiceItem {
   icon?: ReactNode;
 }
 
-interface ServicesSectionProps {
+interface ServicosProps {
   id?: string;
   title?: string;
   services?: ServiceItem[];
 }
 
-export default function ServicesSection({
+export default function Servicos({
   id = "servicos",
   services = [
     {
@@ -32,7 +32,7 @@ export default function ServicesSection({
         "Ambientes de trabalho limpos e organizados para sua equipe.",
     },
   ],
-}: ServicesSectionProps) {
+}: ServicosProps) {
   const iconSrcs = [
     "/icone-janela.png",
     "/icone-vassoura.png",
