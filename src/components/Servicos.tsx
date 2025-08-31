@@ -18,7 +18,7 @@ export default function Servicos({
   services = [
     {
       title: "Limpeza de Vidros",
-      description: "A limpeza de vidros exige técnica e cuidado, e nosso serviço especializado garante um acabamento impecável em janelas e fachadas, utilizando produtos de alta qualidade e equipamentos adequados para cada tipo de superfície. Além disso, oferecemos restauração de vidros, recuperando a transparência e eliminando manchas ou marcas que comprometem a estética, e aplicamos hipermeabilização, criando uma camada protetora que reduz o acúmulo de sujeira, facilita a manutenção e prolonga a vida útil dos vidros.",
+      description: "Oferecemos limpeza, restauração e hipermeabilização de vidros, garantindo transparência, acabamento impecável e proteção duradoura contra sujeiras e manchas, com produtos de alta qualidade e técnicas especializadas.",
     },
     {
       title: "Limpeza Pós-Obra",
