@@ -29,7 +29,7 @@ export default function RodapeFinal({
             width={140}
             height={100}
             className="h-30 w-auto"
-            priority
+            sizes="140px"
           />
         </div>
 

@@ -47,7 +47,7 @@ export default function Navbar({ links, cta }: NavbarProps) {
             width={140}
             height={48}
             className="h-10 w-auto sm:h-12"
-            priority
+            sizes="(max-width: 640px) 120px, 140px"
           />
         </Link>
 
@@ -77,7 +77,7 @@ export default function Navbar({ links, cta }: NavbarProps) {
           <button
             className="sm:hidden p-2"
             onClick={() => setOpen(!open)}
-            aria-label="Abrir menu"
+            aria-label={open ? "Fechar menu" : "Abrir menu"}
           >
             {open ? <CloseIcon /> : <MenuIcon />}
           </button>
@@ -115,13 +115,7 @@ export default function Navbar({ links, cta }: NavbarProps) {
 
 function MenuIcon() {
   return (
-    <svg
-      className="w-6 h-6"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      viewBox="0 0 24 24"
-    >
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
     </svg>
   );
@@ -129,14 +123,9 @@ function MenuIcon() {
 
 function CloseIcon() {
   return (
-    <svg
-      className="w-6 h-6"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      viewBox="0 0 24 24"
-    >
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
     </svg>
   );
 }
+

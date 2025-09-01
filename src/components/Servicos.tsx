@@ -18,23 +18,22 @@ export default function Servicos({
   services = [
     {
       title: "Vidros",
-      description: "Tratamos pisos de cerâmica, porcelanato, mármore e granito com polimento, raspagem e enceramento, restaurando a aparência original e garantindo maior durabilidade.",
+      description:
+        "Limpeza e tratamento de vidros com acabamento impecável em residências e empresas.",
     },
     {
       title: "Pós-Obra",
-      description: "Após reforma ou construção, nossa equipe especializada deixa tudo limpo e totalmente organizado com excelência, garantindo um ambiente pronto para uso, sem transtornos.",
+      description:
+        "Após reforma ou construção, entregamos o ambiente limpo, organizado e pronto para uso.",
     },
     {
       title: "Pisos",
-      description: "Tratamos pisos de cerâmica, porcelanato, mármore e granito com polimento, raspagem e enceramento, restaurando a aparência e prolongando a durabilidade.",
+      description:
+        "Tratamos pisos de cerâmica, porcelanato, mármore e granito com polimento e enceramento.",
     },
   ],
 }: ServicosProps) {
-  const iconSrcs = [
-    "/icone-janela.png",
-    "/icone-vassoura.png",
-    "/icone-piso.png",
-  ];
+  const iconSrcs = ["/icone-janela.png", "/icone-vassoura.png", "/icone-piso.png"];
   return (
     <section id={id} className="bg-[#FFF9E6] py-16 sm:py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -57,12 +56,8 @@ export default function Servicos({
                     />
                   )}
                 </div>
-                <h3 className="text-xl font-semibold text-foreground">
-                  {item.title}
-                </h3>
-                <p className="mt-2 max-w-xs text-foreground/80">
-                  {item.description}
-                </p>
+                <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
+                <p className="mt-2 max-w-xs text-foreground/80">{item.description}</p>
               </div>
             </div>
           ))}
@@ -71,3 +66,4 @@ export default function Servicos({
     </section>
   );
 }
+

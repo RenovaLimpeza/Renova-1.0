@@ -10,14 +10,14 @@ interface HeroProps {
 
 export default function Hero({
   title = "Limpeza Profissional de Qualidade para Sua Casa e Empresa",
-  description = "Na Renova, oferecemos um serviço completo de limpeza, com técnicas especializadas e materiais de alta qualidade. Atendemos tanto residências quanto empresas, garantindo resultados excepcionais, com preços justos e um atendimento personalizado.",
+  description =
+    "Na Renova, oferecemos um serviço completo de limpeza, com técnicas especializadas e materiais de alta qualidade. Atendemos tanto residências quanto empresas, garantindo resultados excepcionais, com preços justos e atendimento personalizado.",
   ctaLabel = "Solicitar Orçamento",
 }: HeroProps) {
   return (
-<section className="bg-gradient-to-r from-[#DAEAFE] to-white">
+    <section className="bg-gradient-to-r from-[#DAEAFE] to-white">
       <div className="mx-auto max-w-7xl px-6 py-16 sm:py-12 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-y-12 gap-x-30 lg:grid-cols-12">
-          
           <div className="lg:col-span-6 xl:col-span-6">
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
               {title}
@@ -41,11 +41,12 @@ export default function Hero({
               height={300}
               className="object-contain"
               priority
+              sizes="(max-width: 1024px) 80vw, 400px"
             />
           </div>
-
         </div>
       </div>
     </section>
   );
 }
+
