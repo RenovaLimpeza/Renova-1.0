@@ -91,8 +91,41 @@ export default function RootLayout({
             }),
           }}
         />
+        {(() => {
+          const envBase = process.env.NEXT_PUBLIC_SITE_URL || "https://renovalimpezams.com.br";
+          const base = envBase.replace(/\/+$/, "");
+          const json = {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Renova",
+            url: `${base}/`,
+            potentialAction: {
+              "@type": "SearchAction",
+              target: `${base}/?q={search_term_string}`,
+              "query-input": "required name=search_term_string",
+            },
+          };
+          return (
+            <script id="ld-json-website" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(json) }} />
+          );
+        })()}
+
+        {(() => {
+          const envBase = process.env.NEXT_PUBLIC_SITE_URL || "https://renovalimpezams.com.br";
+          const base = envBase.replace(/\/+$/, "");
+          const json = {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Renova",
+            url: `${base}/`,
+            logo: `${base}/renova.png`,
+            image: [`${base}/renova.png`],
+          };
+          return (
+            <script id="ld-json-organization" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(json) }} />
+          );
+        })()}
       </body>
     </html>
   );
 }
-
