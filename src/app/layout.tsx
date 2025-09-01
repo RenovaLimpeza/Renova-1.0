@@ -20,7 +20,7 @@ const navLinks: NavLink[] = [
 const ctaLink: NavLink = { href: "#orcamento", label: "Orçamento" };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.renovalimpezams.com.br"),
   title: {
     default: "Empresa de Limpeza Profissional – Pós-Obra, Vidros e Pisos | Renova",
     template: "%s | Renova",
@@ -63,7 +63,8 @@ export default function RootLayout({
           const base = envBase.replace(/\/+$/, "");
           const json = {
             "@context": "https://schema.org",
-            "@type": "CleaningService",
+            "@type": "LocalBusiness",
+            additionalType: "https://schema.org/CleaningService",
             name: "Renova",
             url: `${base}/`,
             description:
@@ -108,7 +109,7 @@ export default function RootLayout({
           };
           return (
             <script
-              id="ld-json-cleaning-service"
+              id="ld-json-business"
               type="application/ld+json"
               dangerouslySetInnerHTML={{ __html: JSON.stringify(json) }}
             />
