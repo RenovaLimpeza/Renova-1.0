@@ -3,6 +3,10 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Navbar, NavLink } from "@/components";
 
+const SITE_URL =
+  (process.env.NEXT_PUBLIC_SITE_URL || "https://renovalimpezams.com.br").replace(/\/+$/, "");
+
+
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
@@ -27,23 +31,23 @@ export const metadata: Metadata = {
   },
   description:
     "Empresa de limpeza profissional especializada em limpeza pós-obra, limpeza de vidros e limpeza de pisos. Qualidade, pontualidade e atenção aos detalhes.",
-  alternates: { canonical: "/" },
+  alternates: { canonical: `${SITE_URL}/` },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "/",
+    url: `${SITE_URL}/`,
     siteName: "Renova",
     title: "Empresa de Limpeza Profissional – Pós-Obra, Vidros e Pisos | Renova",
     description:
       "Empresa de limpeza profissional: limpeza pós-obra, limpeza de vidros e limpeza de pisos com alto padrão.",
-    images: [{ url: "/renova.png", width: 1200, height: 630, alt: "Renova - Serviços de Limpeza" }],
+    images: [{ url: `${SITE_URL}/renova.png`, width: 1200, height: 630, alt: "Renova - Serviços de Limpeza" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Empresa de Limpeza Profissional – Pós-Obra, Vidros e Pisos | Renova",
     description:
       "Limpeza pós-obra, limpeza de vidros e limpeza de pisos. Solicite orçamento pelo WhatsApp.",
-    images: ["/renova.png"],
+    images: [`${SITE_URL}/renova.png`],
   },
   icons: { icon: "/favicon.ico" },
 };
@@ -57,55 +61,53 @@ export default function RootLayout({
         <Navbar links={navLinks} cta={ctaLink} />
         {children}
 
-        {/* JSON-LD: CleaningService */}
+        {/* JSON-LD: LocalBusiness + CleaningService */}
         {(() => {
           const envBase = process.env.NEXT_PUBLIC_SITE_URL || "https://renovalimpezams.com.br";
           const base = envBase.replace(/\/+$/, "");
           const json = {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            additionalType: "https://schema.org/CleaningService",
-            name: "Renova",
-            url: `${base}/`,
-            description:
-              "Empresa de limpeza profissional especializada em Pós-Obra, Vidros e Pisos.",
-            image: [`${base}/renova.png`],
-            sameAs: [
+            "additionalType": "https://schema.org/CleaningService",
+            "name": "Renova",
+            "url": `${base}/`,
+            "description": "Empresa de limpeza profissional especializada em Pós-Obra, Vidros e Pisos.",
+            "image": [`${base}/renova.png`],
+            "sameAs": [
               "https://www.instagram.com/renovapisos.cg/",
-              "https://web.facebook.com/renova.piso.127",
+              "https://web.facebook.com/renova.piso.127"
             ],
-            address: {
+            "address": {
               "@type": "PostalAddress",
-              addressCountry: "BR",
-              addressLocality: "Campo Grande",
-              addressRegion: "MS",
+              "addressCountry": "BR",
+              "addressLocality": "Campo Grande",
+              "addressRegion": "MS"
             },
-            areaServed: "Campo Grande - MS, Brasil",
-            telephone: "+5567996218497",
-            serviceType: ["Pós-Obra", "Vidros", "Pisos"],
-            openingHoursSpecification: [
+            "areaServed": "Campo Grande - MS, Brasil",
+            "telephone": "+5567996218497",
+            "openingHoursSpecification": [
               {
                 "@type": "OpeningHoursSpecification",
-                dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                opens: "08:00",
-                closes: "18:00",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "18:00"
               },
               {
                 "@type": "OpeningHoursSpecification",
-                dayOfWeek: ["Saturday"],
-                opens: "08:00",
-                closes: "12:00",
-              },
+                "dayOfWeek": ["Saturday"],
+                "opens": "08:00",
+                "closes": "12:00"
+              }
             ],
-            hasOfferCatalog: {
+            "hasOfferCatalog": {
               "@type": "OfferCatalog",
-              name: "Serviços de limpeza",
-              itemListElement: [
-                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Pós-Obra" } },
-                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vidros" } },
-                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Pisos" } },
-              ],
-            },
+              "name": "Serviços de limpeza",
+              "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpeza Pós-Obra" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpeza de Vidros" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpeza de Pisos" } }
+              ]
+            }
           };
           return (
             <script
@@ -115,7 +117,7 @@ export default function RootLayout({
             />
           );
         })()}
-
+        
         {/* JSON-LD: WebSite */}
         {(() => {
           const envBase = process.env.NEXT_PUBLIC_SITE_URL || "https://renovalimpezams.com.br";
