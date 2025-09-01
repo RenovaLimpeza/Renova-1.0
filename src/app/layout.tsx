@@ -20,7 +20,7 @@ const navLinks: NavLink[] = [
 const ctaLink: NavLink = { href: "#orcamento", label: "Orçamento" };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.renovalimpezams.com.br/"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.renovalimpezams.com.br"),
   title: {
     default: "Empresa de Limpeza Profissional – Pós-Obra, Vidros e Pisos | Renova",
     template: "%s | Renova",
