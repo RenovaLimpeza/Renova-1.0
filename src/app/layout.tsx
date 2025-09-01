@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import { Navbar, NavLink } from "@/components";
 
@@ -57,42 +56,114 @@ export default function RootLayout({
       <body className={`${poppins.variable} antialiased`}>
         <Navbar links={navLinks} cta={ctaLink} />
         {children}
-        {/* JSON-LD: Organização/LocalBusiness básico */}
-        <Script
-          id="ld-json-org"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "CleaningService",
-              name: "Renova",
-              url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
-              description:
-                "Empresa de limpeza profissional: pós-obra, vidros e pisos. Orçamentos rápidos via WhatsApp.",
-              image: ["/renova.png"],
-              sameAs: [
-                "https://www.instagram.com/renovapisos.cg/",
-                "https://web.facebook.com/renova.piso.127",
-              ],
-              address: { "@type": "PostalAddress", addressCountry: "BR" },
-              telephone: "+55-67-99621-8497",
-              areaServed: { "@type": "AdministrativeArea", name: "Brasil" },
-              serviceType: ["Limpeza pós-obra", "Limpeza de vidros", "Limpeza de pisos"],
-              hasOfferCatalog: {
-                "@type": "OfferCatalog",
-                name: "Serviços de limpeza",
-                itemListElement: [
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Limpeza pós-obra" } },
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Limpeza de vidros" } },
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Limpeza de pisos" } },
-                ],
+
+        {/* JSON-LD: CleaningService */}
+        {(() => {
+          const envBase = process.env.NEXT_PUBLIC_SITE_URL || "https://renovalimpezams.com.br";
+          const base = envBase.replace(/\/+$/, "");
+          const json = {
+            "@context": "https://schema.org",
+            "@type": "CleaningService",
+            name: "Renova",
+            url: `${base}/`,
+            description:
+              "Empresa de limpeza profissional especializada em Pós-Obra, Vidros e Pisos.",
+            image: [`${base}/renova.png`],
+            sameAs: [
+              "https://www.instagram.com/renovapisos.cg/",
+              "https://web.facebook.com/renova.piso.127",
+            ],
+            address: {
+              "@type": "PostalAddress",
+              addressCountry: "BR",
+              addressLocality: "Campo Grande",
+              addressRegion: "MS",
+            },
+            areaServed: "Campo Grande - MS, Brasil",
+            telephone: "+5567996218497",
+            serviceType: ["Pós-Obra", "Vidros", "Pisos"],
+            openingHoursSpecification: [
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                opens: "08:00",
+                closes: "18:00",
               },
-            }),
-          }}
-        />
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: ["Saturday"],
+                opens: "08:00",
+                closes: "12:00",
+              },
+            ],
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Serviços de limpeza",
+              itemListElement: [
+                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Pós-Obra" } },
+                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vidros" } },
+                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Pisos" } },
+              ],
+            },
+          };
+          return (
+            <script
+              id="ld-json-cleaning-service"
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(json) }}
+            />
+          );
+        })()}
+
+        {/* JSON-LD: WebSite */}
+        {(() => {
+          const envBase = process.env.NEXT_PUBLIC_SITE_URL || "https://renovalimpezams.com.br";
+          const base = envBase.replace(/\/+$/, "");
+          const json = {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Renova",
+            url: `${base}/`,
+            potentialAction: {
+              "@type": "SearchAction",
+              target: `${base}/?q={search_term_string}`,
+              "query-input": "required name=search_term_string",
+            },
+          };
+          return (
+            <script
+              id="ld-json-website"
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(json) }}
+            />
+          );
+        })()}
+
+        {/* JSON-LD: Organization */}
+        {(() => {
+          const envBase = process.env.NEXT_PUBLIC_SITE_URL || "https://renovalimpezams.com.br";
+          const base = envBase.replace(/\/+$/, "");
+          const json = {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Renova",
+            url: `${base}/`,
+            logo: `${base}/renova.png`,
+            image: [`${base}/renova.png`],
+            sameAs: [
+              "https://www.instagram.com/renovapisos.cg/",
+              "https://web.facebook.com/renova.piso.127",
+            ],
+          };
+          return (
+            <script
+              id="ld-json-organization"
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(json) }}
+            />
+          );
+        })()}
       </body>
     </html>
   );
 }
-
