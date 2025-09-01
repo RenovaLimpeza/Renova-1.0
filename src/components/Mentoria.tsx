@@ -15,7 +15,7 @@ export default function Mentoria({
   id = "mentoria",
   title = "Mentoria em Limpeza Profissional",
   description =
-    "Aprimore seus processos de limpeza profissional com uma mentoria personalizada. Acompanhamos você passo a passo, organizando rotinas, padronizando procedimentos e transmitindo técnicas exclusivas para que alcance resultados consistentes, qualidade superior e maior segurança em seus serviços.",
+    "Aprimore seus processos de limpeza com uma mentoria personalizada. Organizamos rotinas, padronizamos procedimentos e transmitimos técnicas para resultados consistentes, qualidade superior e maior segurança.",
   ctaLabel = "Participar da mentoria!",
   ctaHref = "#contato",
   imageSrc = "/mentoria.png",
@@ -35,6 +35,7 @@ export default function Mentoria({
                   height={400}
                   className="rounded-full object-contain"
                   priority
+                  sizes="(max-width: 1024px) 60vw, 400px"
                 />
               </div>
             </div>
@@ -44,9 +45,7 @@ export default function Mentoria({
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               {title}
             </h2>
-            <p className="mt-6 text-foreground/80 leading-relaxed max-w-lg">
-              {description}
-            </p>
+            <p className="mt-6 text-foreground/80 leading-relaxed max-w-lg">{description}</p>
             <div className="mt-8">
               <BotaoWhatsApp
                 type="mentoria"

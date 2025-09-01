@@ -26,15 +26,12 @@ export default function RodapePrincipal({
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-contain rounded-lg"
-                priority
               />
             </div>
           </div>
 
           <div className="order-1 lg:order-2 flex flex-col items-center text-center lg:items-start lg:text-left">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              {title}
-            </h2>
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">{title}</h2>
             <div className="mt-6">
               <BotaoWhatsApp
                 type="orcamento"
@@ -49,3 +46,4 @@ export default function RodapePrincipal({
     </section>
   );
 }
+

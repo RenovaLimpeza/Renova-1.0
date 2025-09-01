@@ -14,8 +14,3 @@ export default function Home() {
   );
 }
 
-export const metadata = {
-  title: "Início",
-  description:
-    "Limpeza pós-obra, serviços de limpeza residencial e comercial com equipe de confiança. Solicite orçamento grátis.",
-};

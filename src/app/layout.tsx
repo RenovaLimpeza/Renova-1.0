@@ -28,9 +28,7 @@ export const metadata: Metadata = {
   },
   description:
     "Empresa de limpeza profissional especializada em limpeza pós-obra, limpeza de vidros e limpeza de pisos. Qualidade, pontualidade e atenção aos detalhes.",
-  alternates: {
-    canonical: "/",
-  },
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "pt_BR",
@@ -39,14 +37,7 @@ export const metadata: Metadata = {
     title: "Empresa de Limpeza Profissional – Pós-Obra, Vidros e Pisos | Renova",
     description:
       "Empresa de limpeza profissional: limpeza pós-obra, limpeza de vidros e limpeza de pisos com alto padrão.",
-    images: [
-      {
-        url: "/renova.png",
-        width: 1200,
-        height: 630,
-        alt: "Renova - Serviços de Limpeza",
-      },
-    ],
+    images: [{ url: "/renova.png", width: 1200, height: 630, alt: "Renova - Serviços de Limpeza" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -55,30 +46,28 @@ export const metadata: Metadata = {
       "Limpeza pós-obra, limpeza de vidros e limpeza de pisos. Solicite orçamento pelo WhatsApp.",
     images: ["/renova.png"],
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
+  icons: { icon: "/favicon.ico" },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR">
       <body className={`${poppins.variable} antialiased`}>
         <Navbar links={navLinks} cta={ctaLink} />
         {children}
         {/* JSON-LD: Organização/LocalBusiness básico */}
-        <Script id="ld-json-org" type="application/ld+json"
+        <Script
+          id="ld-json-org"
+          type="application/ld+json"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "CleaningService",
               name: "Renova",
-              url: (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+              url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
               description:
                 "Empresa de limpeza profissional: pós-obra, vidros e pisos. Orçamentos rápidos via WhatsApp.",
               image: ["/renova.png"],
@@ -96,9 +85,9 @@ export default function RootLayout({
                 itemListElement: [
                   { "@type": "Offer", itemOffered: { "@type": "Service", name: "Limpeza pós-obra" } },
                   { "@type": "Offer", itemOffered: { "@type": "Service", name: "Limpeza de vidros" } },
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Limpeza de pisos" } }
-                ]
-              }
+                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Limpeza de pisos" } },
+                ],
+              },
             }),
           }}
         />
@@ -106,3 +95,4 @@ export default function RootLayout({
     </html>
   );
 }
+
