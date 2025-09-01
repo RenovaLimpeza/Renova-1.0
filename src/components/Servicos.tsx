@@ -14,19 +14,19 @@ interface ServicosProps {
 }
 
 export default function Servicos({
-  id = "servicos",
+  id = "services",
   services = [
     {
-      title: "Limpeza de Vidros",
-      description: "Oferecemos limpeza, restauração e hipermeabilização de vidros, garantindo transparência, acabamento impecável e proteção duradoura contra sujeiras e manchas, com produtos de alta qualidade e técnicas especializadas.",
+      title: "Vidros",
+      description: "Tratamos pisos de cerâmica, porcelanato, mármore e granito com polimento, raspagem e enceramento, restaurando a aparência original e garantindo maior durabilidade.",
     },
     {
-      title: "Limpeza Pós-Obra",
-      description: "Seja após uma reforma ou construção, nossa equipe está preparada para deixar tudo limpo e organizado. Utilizamos equipamentos e produtos específicos para eliminar toda a sujeira e resíduos, garantindo um ambiente pronto para uso com o mínimo de transtorno.",
+      title: "Pós-Obra",
+      description: "Após reforma ou construção, nossa equipe especializada deixa tudo limpo e totalmente organizado com excelência, garantindo um ambiente pronto para uso, sem transtornos.",
     },
     {
-      title: "Limpeza de Pisos",
-      description: "Tratamos pisos de todos os tipos, desde cerâmicas e porcelanatos até mármores e granitos. Nosso serviço inclui polimento, raspagem e enceramento, com técnicas especializadas para restaurar a aparência original e prolongar a durabilidade do seu piso.",
+      title: "Pisos",
+      description: "Tratamos pisos de cerâmica, porcelanato, mármore e granito com polimento, raspagem e enceramento, restaurando a aparência e prolongando a durabilidade.",
     },
   ],
 }: ServicosProps) {
@@ -39,7 +39,7 @@ export default function Servicos({
     <section id={id} className="bg-[#FFF9E6] py-16 sm:py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <h2 className="text-center text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-          Serviços de Limpeza Profissional: Pós-Obra, Vidros e Pisos
+          Serviços de Limpeza
         </h2>
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
           {services.map((item, idx) => (

@@ -15,7 +15,7 @@ export default function Mentoria({
   id = "mentoria",
   title = "Mentoria em Limpeza Profissional",
   description =
-    "Aprimore seus processos de limpeza profissional com orientação personalizada. Padronizamos procedimentos, organizamos rotinas e capacitamos sua equipe para resultados consistentes.",
+    "Aprimore seus processos de limpeza profissional com uma mentoria personalizada. Acompanhamos você passo a passo, organizando rotinas, padronizando procedimentos e transmitindo técnicas exclusivas para que alcance resultados consistentes, qualidade superior e maior segurança em seus serviços.",
   ctaLabel = "Participar da mentoria!",
   ctaHref = "#contato",
   imageSrc = "/mentoria.png",
@@ -40,7 +40,7 @@ export default function Mentoria({
             </div>
           </div>
 
-          <div className="order-2 lg:order-2 flex flex-col items-center text-center gap-10">
+          <div className="order-2 lg:order-2 flex flex-col items-center text-center gap-5">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               {title}
             </h2>

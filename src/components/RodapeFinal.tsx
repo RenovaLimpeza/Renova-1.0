@@ -15,7 +15,7 @@ export default function RodapeFinal({
   instagramUrl = "https://www.instagram.com/renovapisos.cg/",
   facebookUrl = "https://web.facebook.com/renova.piso.127",
   phone = "(67) 9 9621-8497",
-  email = "contato@renova.com",
+  email = "renova.limpeza@hotmail.com",
   logoSrc = "/logo-footer.png",
   logoAlt = "Renova Logo",
 }: SmallFooterProps) {
