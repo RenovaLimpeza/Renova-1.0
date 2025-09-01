@@ -1,28 +1,21 @@
-import Image from "next/image";
+import { Hero, Sobre, Servicos, GaleriaServicos, Mentoria, RodapePrincipal, RodapeFinal } from "@/components";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen p-6 text-center bg-background text-foreground">
-      <picture>
-        <source srcSet="/renova-dark.png" media="(prefers-color-scheme: dark)" />
-        <Image
-          src="/renova.png"
-          alt="Mascote da Renova operando máquina de limpeza"
-          width={260}
-          height={260}
-          priority
-        />
-      </picture>
-      <h1 className="mt-6 text-4xl font-bold">
-        Estamos em produção
-      </h1>
-      <p className="mt-4 max-w-md text-lg text-foreground/80">
-        Nosso site de serviços de limpeza pós-obra está sendo preparado.
-        Em breve você poderá conhecer todas as nossas soluções.
-      </p>
-      <p className="mt-8 text-sm text-slate-500">
-        Contato: (67) 9 9621-8497
-      </p>
+    <main className="bg-white">
+      <Hero />
+      <Sobre />
+      <Servicos />
+      <GaleriaServicos />
+      <Mentoria />
+      <RodapePrincipal />
+      <RodapeFinal />
     </main>
   );
 }
+
+export const metadata = {
+  title: "Início",
+  description:
+    "Limpeza pós-obra, serviços de limpeza residencial e comercial com equipe de confiança. Solicite orçamento grátis.",
+};
