@@ -56,8 +56,8 @@ export default function Servicos({
                     />
                   )}
                 </div>
-                <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
-                <p className="mt-2 max-w-xs text-foreground/80">{item.description}</p>
+                <h3 className="text-xl font-semibold text-foreground break-words">{item.title}</h3>
+                <p className="mt-2 max-w-xs text-foreground/80 break-words">{item.description}</p>
               </div>
             </div>
           ))}
@@ -66,4 +66,3 @@ export default function Servicos({
     </section>
   );
 }
-
