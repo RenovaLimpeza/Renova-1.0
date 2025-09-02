@@ -13,7 +13,7 @@ interface MentoriaSectionProps {
 
 export default function Mentoria({
   id = "mentoria",
-  title = "Mentoria em Limpeza Profissional",
+  title = "Mentoria Exclsuiva",
   description =
     "Aprimore seus processos de limpeza com uma mentoria personalizada. Organizamos rotinas, padronizamos procedimentos e transmitimos técnicas para resultados consistentes, qualidade superior e maior segurança.",
   ctaLabel = "Participar da mentoria!",
@@ -51,7 +51,7 @@ export default function Mentoria({
                 type="mentoria"
                 label={ctaLabel}
                 unstyled
-                className="inline-flex items-center justify-center rounded-md bg-foreground px-5 py-3 font-semibold text-white transition-colors hover:bg-foreground/90"
+                className="inline-flex items-center justify-center rounded-md bg-[#2F6AA6] px-5 py-3 font-semibold text-white transition-colors hover:bg-foreground/90"
               />
             </div>
           </div>
