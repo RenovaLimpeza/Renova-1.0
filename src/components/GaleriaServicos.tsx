@@ -6,7 +6,7 @@ import { useState } from "react";
 interface GalleryItem {
   description: string;
   instagramUrl?: string;
-  images?: string[]; // ex: ["/a.jpg","/b.jpg"]
+  images?: string[];
 }
 
 interface ServiceGallerySectionProps {
@@ -48,7 +48,7 @@ export default function GaleriaServicos({
 
         <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-4">
           {items.map((item, idx) => (
-            <Card key={idx} item={item} />
+            <Card key={idx} item={item} hideBadge={idx === items.length - 1} />
           ))}
         </div>
 
@@ -69,7 +69,7 @@ export default function GaleriaServicos({
   );
 }
 
-function Card({ item }: { item: GalleryItem }) {
+function Card({ item, hideBadge = false }: { item: GalleryItem; hideBadge?: boolean }) {
   const defaultPaths = [
     "/services/calcada-antes.jpeg",
     "/services/calcada-depois.jpeg",
@@ -96,12 +96,18 @@ function Card({ item }: { item: GalleryItem }) {
               alt={img.alt}
               fill
               sizes="(max-width: 1024px) 100vw, 25vw"
-              className={`absolute inset-0 object-cover transition-opacity duration-300 ease-in-out ${
-                idx === i ? "opacity-100" : "opacity-0"
-              }`}
+              className={`absolute inset-0 object-cover transition-opacity duration-300 ease-in-out ${idx === i ? "opacity-100" : "opacity-0"
+                }`}
               priority={i === 0}
             />
           ))}
+
+          {!hideBadge && (
+            <span className="absolute top-2 left-1/2 -translate-x-1/2 bg-black/50 text-white text-xs font-semibold px-3 py-1 rounded-md">
+              {idx === 0 ? "Antes" : "Depois"}
+            </span>
+
+          )}
 
           <button
             type="button"
@@ -130,9 +136,8 @@ function Card({ item }: { item: GalleryItem }) {
                 key={i}
                 aria-label={`Ir para imagem ${i + 1}`}
                 onClick={() => setIdx(i)}
-                className={`h-2.5 rounded-full transition-all ${
-                  idx === i ? "bg-white w-6" : "bg-white/50 w-2.5"
-                }`}
+                className={`h-2.5 rounded-full transition-all ${idx === i ? "bg-white w-6" : "bg-white/50 w-2.5"
+                  }`}
               />
             ))}
           </div>
