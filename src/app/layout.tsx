@@ -49,7 +49,14 @@ export const metadata: Metadata = {
       "Limpeza pós-obra, limpeza de vidros e limpeza de pisos. Solicite orçamento pelo WhatsApp.",
     images: [`${SITE_URL}/renova.png`],
   },
-  icons: { icon: "/favicon.ico" },
+  manifest: "/manifest.json",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/logo-menor.png", sizes: "192x192", type: "image/png" },
+      { url: "/renova.png", sizes: "512x512", type: "image/png" },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -57,6 +64,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR">
+      <head>
+        <meta charSet="utf-8" />
+      </head>
       <body className={`${poppins.variable} antialiased`}>
         <Navbar links={navLinks} cta={ctaLink} />
         {children}

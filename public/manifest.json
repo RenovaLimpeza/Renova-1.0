@@ -7,7 +7,9 @@
   "theme_color": "#163558",
   "description": "Limpeza pós-obra, residencial e comercial com qualidade.",
   "icons": [
-    { "src": "/favicon.ico", "sizes": "any", "type": "image/x-icon" }
+    { "src": "/favicon.ico", "sizes": "any", "type": "image/x-icon" },
+    { "src": "/logo-menor.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/renova.png", "sizes": "512x512", "type": "image/png" }
   ]
 }
 
