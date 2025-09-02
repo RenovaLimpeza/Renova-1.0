@@ -13,7 +13,7 @@ interface MentoriaSectionProps {
 
 export default function Mentoria({
   id = "mentoria",
-  title = "Mentoria Exclsuiva",
+  title = "Limpeza Profissional: o método por trás dos resultados",
   description =
     "Aprimore seus processos de limpeza com uma mentoria personalizada. Organizamos rotinas, padronizamos procedimentos e transmitimos técnicas para resultados consistentes, qualidade superior e maior segurança.",
   ctaLabel = "Participar da mentoria!",
