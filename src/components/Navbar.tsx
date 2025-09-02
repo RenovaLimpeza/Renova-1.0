@@ -31,9 +31,12 @@ export default function Navbar({ links, cta }: NavbarProps) {
       className={[
         "sticky top-0 z-50 h-16 lg:h-20 transition-colors duration-300",
         "drop-shadow-[0_2px_6px_rgba(0,0,0,0.15)]",
+        // No mobile, o fundo deve ser sólido (não transparente)
+        // Em telas >= sm, mantém o comportamento anterior com base no scroll
+        "bg-white",
         scrolled
-          ? "bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/70"
-          : "bg-background",
+          ? "sm:bg-white/80 sm:backdrop-blur"
+          : "sm:bg-background",
       ].join(" ")}
     >
       <nav
@@ -85,7 +88,7 @@ export default function Navbar({ links, cta }: NavbarProps) {
       </nav>
 
       {open && (
-        <ul className="sm:hidden flex flex-col gap-4 p-4 border-t border-foreground/10 bg-white/95 backdrop-blur">
+        <ul className="sm:hidden flex flex-col gap-4 p-4 border-t border-foreground/10 bg-white">
           {links.map((link) => (
             <li key={link.href}>
               <Link
@@ -128,4 +131,3 @@ function CloseIcon() {
     </svg>
   );
 }
-

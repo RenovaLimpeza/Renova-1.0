@@ -16,7 +16,7 @@ export default function RodapePrincipal({
 }: RodapePrincipalProps) {
   return (
     <section id={id} className="bg-[#163558]">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 p-4">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center">
           <div className="order-2 lg:order-1 flex justify-center">
             <div className="relative w-48 h-48 sm:w-64 sm:h-64">
