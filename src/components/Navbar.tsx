@@ -51,7 +51,7 @@ export default function Navbar({ links, cta }: NavbarProps) {
       >
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/logo-navbar.png"
+            src="/logo/logo-navbar.png"
             alt="Renova"
             width={140}
             height={48}
@@ -220,3 +220,4 @@ function CloseIcon() {
     </svg>
   );
 }
+

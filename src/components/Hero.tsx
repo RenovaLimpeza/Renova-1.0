@@ -39,7 +39,7 @@ export default function Hero({
 
           <div className="flex-1 basis-0 min-w-0 flex justify-end lg:col-span-6">
             <Image
-              src="/logo-completa.png"
+              src="/logo/logo-completa.png"
               alt="Logo Renova"
               width={400}
               height={300}
@@ -66,3 +66,4 @@ export default function Hero({
     </section>
   );
 }
+

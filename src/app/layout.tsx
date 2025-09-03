@@ -69,21 +69,21 @@ export const metadata: Metadata = {
     title: "Empresa de Limpeza Profissional – Pós-Obra, Vidros e Pisos | Renova",
     description:
       "Empresa de limpeza profissional: limpeza pós-obra, limpeza de vidros e limpeza de pisos com alto padrão.",
-    images: [{ url: `${SITE_URL}/renova.png`, width: 1200, height: 630, alt: "Renova - Serviços de Limpeza" }],
+    images: [{ url: `${SITE_URL}/logo/renova.png`, width: 1200, height: 630, alt: "Renova - Serviços de Limpeza" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Empresa de Limpeza Profissional – Pós-Obra, Vidros e Pisos | Renova",
     description:
       "Limpeza pós-obra, limpeza de vidros e limpeza de pisos. Solicite orçamento pelo WhatsApp.",
-    images: [`${SITE_URL}/renova.png`],
+    images: [`${SITE_URL}/logo/renova.png`],
   },
   manifest: "/manifest.json",
   icons: {
     icon: [
       { url: "/favicon.ico" },
-      { url: "/logo-menor.png", sizes: "192x192", type: "image/png" },
-      { url: "/renova.png", sizes: "512x512", type: "image/png" },
+      { url: "/logo/logo-menor.png", sizes: "192x192", type: "image/png" },
+      { url: "/logo/renova.png", sizes: "512x512", type: "image/png" },
     ],
   },
 };
@@ -111,7 +111,7 @@ export default function RootLayout({
             "name": "Renova",
             "url": `${base}/`,
             "description": "Empresa de limpeza profissional especializada em Pós-Obra, Vidros e Pisos.",
-            "image": [`${base}/renova.png`],
+            "image": [`${base}/logo/renova.png`],
             "sameAs": [
               "https://www.instagram.com/renovapisos.cg/",
               "https://web.facebook.com/renova.piso.127"
@@ -190,8 +190,8 @@ export default function RootLayout({
             "@type": "Organization",
             name: "Renova",
             url: `${base}/`,
-            logo: `${base}/renova.png`,
-            image: [`${base}/renova.png`],
+            logo: `${base}/logo/renova.png`,
+            image: [`${base}/logo/renova.png`],
             sameAs: [
               "https://www.instagram.com/renovapisos.cg/",
               "https://web.facebook.com/renova.piso.127",
@@ -209,3 +209,4 @@ export default function RootLayout({
     </html>
   );
 }
+

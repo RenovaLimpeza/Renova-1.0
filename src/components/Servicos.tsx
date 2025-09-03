@@ -35,7 +35,11 @@ export default function Servicos({
     },
   ],
 }: ServicosProps) {
-  const iconSrcs = ["/icone-janela.png", "/icone-vassoura.png", "/icone-piso.png"];
+  const iconSrcs = [
+    "/icons/icone-vidros.png",
+    "/icons/icone-pos-obra.png",
+    "/icons/icone-pisos.png",
+  ];
   const defaultHrefs = [
     "/limpeza-de-vidros",
     "/limpeza-pos-obra",
@@ -81,3 +85,4 @@ export default function Servicos({
     </section>
   );
 }
+

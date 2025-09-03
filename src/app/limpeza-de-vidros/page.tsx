@@ -21,12 +21,12 @@ export const metadata: Metadata = {
 
 export default function LimpezaDeVidrosPage() {
   const cards = [
-    { title: "Limpeza de Vidros de Janelas", image: "/card2/img1.png" },
-    { title: "Restauração de Vidros Manchados", image: "/card2/img2.png" },
-    { title: "Manutenção de Vidros Temperados", image: "/card1/img1.png" },
-    { title: "Limpeza de Portas de Vidro", image: "/card1/img2.png" },
-    { title: "Acabamento Sem Marcas", image: "/card4/img1.png" },
-    { title: "Fachadas e Vitrines", image: "/card3/img1.png" },
+    { title: "Limpeza de Vidros de Janelas", image: "/geral/hero-vidros.png" },
+    { title: "Restauração de Vidros Manchados", image: "/cards/card2/img2.png" },
+    { title: "Manutenção de Vidros Temperados", image: "/cards/card1/img1.png" },
+    { title: "Limpeza de Portas de Vidro", image: "/cards/card1/img2.png" },
+    { title: "Acabamento Sem Marcas", image: "/cards/card4/img1.png" },
+    { title: "Fachadas e Vitrines", image: "/cards/card3/img1.png" },
   ];
 
   const jsonLd = {
@@ -51,7 +51,10 @@ export default function LimpezaDeVidrosPage() {
         title="Limpeza de Vidros: Acabamento Impecável Sem Manchas"
         description="Garantimos transparência e brilho com técnicas e produtos específicos para cada tipo de vidro."
         ctaLabel="Solicitar Orçamento"
-        imageUrl="/card2/img1.png"
+        imageUrl="/geral/hero-vidros.png"
+        imageAlt="Vidros transparentes e sem manchas após limpeza"
+        iconUrl="/icone-janela.png"
+        iconAlt="Ícone de limpeza de vidros"
       />
 
       <ServiceCards
@@ -80,3 +83,5 @@ export default function LimpezaDeVidrosPage() {
     </main>
   );
 }
+
+

@@ -21,12 +21,12 @@ export const metadata: Metadata = {
 
 export default function LimpezaDePisosPage() {
   const cards = [
-    { title: "Polimento de Cerâmica", image: "/card1/img1.png" },
-    { title: "Restaurando Pisos de Mármore", image: "/card3/img1.png" },
-    { title: "Técnicas de Enceramento", image: "/card4/img2.png" },
-    { title: "Limpeza de Porcelanato", image: "/card1/img2.png" },
-    { title: "Remoção de Manchas", image: "/card3/img2.png" },
-    { title: "Proteção e Brilho", image: "/card4/img1.png" },
+    { title: "Polimento de Cerâmica", image: "/cards/card1/img1.png" },
+    { title: "Restaurando Pisos de Mármore", image: "/cards/card3/img1.png" },
+    { title: "Técnicas de Enceramento", image: "/cards/card4/img2.png" },
+    { title: "Limpeza de Porcelanato", image: "/cards/card1/img2.png" },
+    { title: "Remoção de Manchas", image: "/cards/card3/img2.png" },
+    { title: "Proteção e Brilho", image: "/cards/card4/img1.png" },
   ];
 
   const jsonLd = {
@@ -51,7 +51,10 @@ export default function LimpezaDePisosPage() {
         title="Limpeza Profunda de Pisos: Cerâmica, Porcelanato, Mármore e Granito"
         description="Tratamento profissional para diferentes tipos de pisos com polimento, remoção de manchas, proteção e brilho duradouro."
         ctaLabel="Solicitar Orçamento"
-        imageUrl="/card3/img1.png"
+        imageUrl="/geral/hero-vidros.png"
+        imageAlt="Piso restaurado e brilhante após limpeza"
+        iconUrl="/icons/icone-pisos.png"
+        iconAlt="Ícone de limpeza de pisos"
       />
 
       <ServiceCards
@@ -80,3 +83,5 @@ export default function LimpezaDePisosPage() {
     </main>
   );
 }
+
+

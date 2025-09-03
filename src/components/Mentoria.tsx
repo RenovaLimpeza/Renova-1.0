@@ -18,7 +18,7 @@ export default function Mentoria({
     "Aprimore seus processos de limpeza com uma mentoria personalizada. Organizamos rotinas, padronizamos procedimentos e transmitimos técnicas para resultados consistentes, qualidade superior e maior segurança.",
   ctaLabel = "Participar da mentoria!",
   ctaHref = "#contato",
-  imageSrc = "/mentoria.png",
+  imageSrc = "/geral/mentoria.png",
   imageAlt = "Mentoria em limpeza profissional Renova",
 }: MentoriaSectionProps) {
   return (
@@ -60,4 +60,5 @@ export default function Mentoria({
     </section>
   );
 }
+
 

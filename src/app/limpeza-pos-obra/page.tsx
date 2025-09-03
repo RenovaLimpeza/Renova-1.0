@@ -21,12 +21,12 @@ export const metadata: Metadata = {
 
 export default function LimpezaPosObraPage() {
   const cards = [
-    { title: "Remoção de Poeira e Detritos", image: "/card4/img1.png" },
-    { title: "Limpeza de Pisos e Superfícies", image: "/card1/img1.png" },
-    { title: "Tratamento de Manchas", image: "/card3/img2.png" },
-    { title: "Acabamento em Vidros", image: "/card2/img1.png" },
-    { title: "Organização Final do Ambiente", image: "/card4/img2.png" },
-    { title: "Preparação para Mudança", image: "/card1/img2.png" },
+    { title: "Remoção de Poeira e Detritos", image: "/cards/card4/img1.png" },
+    { title: "Limpeza de Pisos e Superfícies", image: "/cards/card1/img1.png" },
+    { title: "Tratamento de Manchas", image: "/cards/card3/img2.png" },
+    { title: "Acabamento em Vidros", image: "/cards/card2/img1.png" },
+    { title: "Organização Final do Ambiente", image: "/cards/card4/img2.png" },
+    { title: "Preparação para Mudança", image: "/cards/card1/img2.png" },
   ];
 
   const jsonLd = {
@@ -51,7 +51,10 @@ export default function LimpezaPosObraPage() {
         title="Limpeza Pós-Obra Profunda e Eficiente"
         description="Removemos resíduos e poeira, limpamos pisos e superfícies e entregamos o acabamento final para seu espaço ficar pronto para uso."
         ctaLabel="Solicitar Orçamento"
-        imageUrl="/card4/img2.png"
+        imageUrl="/geral/hero-pos-obra.png"
+        imageAlt="Ambiente limpo após obra com acabamento final"
+        iconUrl="/icons/icone-pos-obra.png"
+        iconAlt="Ícone de limpeza pós-obra"
       />
 
       <ServiceCards
@@ -80,3 +83,5 @@ export default function LimpezaPosObraPage() {
     </main>
   );
 }
+
+

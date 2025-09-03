@@ -11,7 +11,7 @@ interface RodapePrincipalProps {
 export default function RodapePrincipal({
   id = "orcamento",
   title = "Pronto para transformar seu espaço?",
-  imageSrc = "/logo-menor.png",
+  imageSrc = "/logo/logo-menor.png",
   imageAlt = "Solicite orçamento de limpeza profissional - Renova",
 }: RodapePrincipalProps) {
   return (

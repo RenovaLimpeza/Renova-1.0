@@ -23,19 +23,19 @@ export default function GaleriaServicos({
   items = [
     {
       description: "Limpeza de pisos com remoção de sujeiras e manchas.",
-      images: ["/card1/img1.png", "/card1/img2.png"],
+      images: ["/cards/card1/img1.png", "/cards/card1/img2.png"],
     },
     {
       description: "Transparência renovada com limpeza profissional de vidros.",
-      images: ["/card2/img1.png", "/card2/img2.png"],
+      images: ["/cards/card2/img1.png", "/cards/card2/img2.png"],
     },
     {
       description: "Tratamento que realça o brilho e valoriza sua calçada de pedra portuguesa.",
-      images: ["/card3/img1.png", "/card3/img2.png"],
+      images: ["/cards/card3/img1.png", "/cards/card3/img2.png"],
     },
     {
       description: "Casa renovada e livre de sujeira com nossa limpeza pós-obra especializada.",
-      images: ["/card4/img1.png", "/card4/img2.png"],
+      images: ["/cards/card4/img1.png", "/cards/card4/img2.png"],
     },
   ],
 }: ServiceGallerySectionProps) {
@@ -148,3 +148,4 @@ function Card({ item, hideBadge = false }: { item: GalleryItem; hideBadge?: bool
     </div>
   );
 }
+
