@@ -9,3 +9,6 @@ export { default as GaleriaServicos } from "./GaleriaServicos";
 export { default as Mentoria } from "./Mentoria";
 export { default as RodapePrincipal } from "./RodapePrincipal";
 export { default as RodapeFinal } from "./RodapeFinal";
+export { default as ServiceCards } from "./ServiceCards";
+export { default as ServiceVideoSection } from "./ServiceVideoSection";
+export { default as ServiceHero } from "./ServiceHero";

@@ -14,6 +14,35 @@ const poppins = Poppins({
   display: "swap",
 });
 
+// Navigation (includes service landing pages)
+const NEW_SITE_NAV_LINKS: NavLink[] = [
+  { href: "#about", label: "Sobre nós" },
+  {
+    href: "/#services",
+    label: "Serviços",
+    children: [
+      { href: "/limpeza-pos-obra", label: "Limpeza Pós-Obra" },
+      { href: "/limpeza-de-pisos", label: "Limpeza de Pisos" },
+      { href: "/limpeza-de-vidros", label: "Limpeza de Vidros" },
+    ],
+  },
+  { href: "#mentoria", label: "Mentoria" },
+  { href: "#contato", label: "Contato" },
+];
+
+const NEW_SITE_CTA_LINK: NavLink = { href: "#orcamento", label: "Orçamento" };
+const siteNavLinks: NavLink[] = [
+  { href: "#about", label: "Sobre nós" },
+  { href: "#services", label: "Serviços" },
+  { href: "/limpeza-pos-obra", label: "Pós-Obra" },
+  { href: "/limpeza-de-pisos", label: "Pisos" },
+  { href: "/limpeza-de-vidros", label: "Vidros" },
+  { href: "#mentoria", label: "Mentoria" },
+  { href: "#contato", label: "Contato" },
+];
+
+const siteCtaLink: NavLink = { href: "#orcamento", label: "Orçamento" };
+
 const navLinks: NavLink[] = [
   { href: "#about", label: "Sobre nós" },
   { href: "#services", label: "Serviços" },
@@ -68,7 +97,7 @@ export default function RootLayout({
         <meta charSet="utf-8" />
       </head>
       <body className={`${poppins.variable} antialiased`}>
-        <Navbar links={navLinks} cta={ctaLink} />
+        <Navbar links={NEW_SITE_NAV_LINKS} cta={NEW_SITE_CTA_LINK} />
         {children}
 
         {/* JSON-LD: LocalBusiness + CleaningService */}

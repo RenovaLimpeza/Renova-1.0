@@ -1,10 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ReactNode } from "react";
 
 interface ServiceItem {
   title: string;
   description: string;
   icon?: ReactNode;
+  href?: string;
 }
 
 interface ServicosProps {
@@ -34,6 +36,11 @@ export default function Servicos({
   ],
 }: ServicosProps) {
   const iconSrcs = ["/icone-janela.png", "/icone-vassoura.png", "/icone-piso.png"];
+  const defaultHrefs = [
+    "/limpeza-de-vidros",
+    "/limpeza-pos-obra",
+    "/limpeza-de-pisos",
+  ];
   return (
     <section id={id} className="bg-[#FFF9E6] py-16 sm:py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -58,6 +65,14 @@ export default function Servicos({
                 </div>
                 <h3 className="text-xl font-semibold text-foreground break-words">{item.title}</h3>
                 <p className="mt-2 max-w-xs text-foreground/80 break-words">{item.description}</p>
+                <div className="mt-4">
+                  <Link
+                    href={item.href ?? defaultHrefs[idx] ?? "#services"}
+                    className="inline-flex items-center justify-center rounded-md bg-yellow-400 px-4 py-2 font-semibold text-[#163558] transition-colors hover:bg-yellow-300"
+                  >
+                    Saiba Mais
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
