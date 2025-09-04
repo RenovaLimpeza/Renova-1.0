@@ -31,10 +31,7 @@ export default function ServiceHero({
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
               {title}
             </h1>
-            <p className="mt-6 hidden lg:block text-lg leading-8 text-foreground/80">
-              {description}
-            </p>
-            <div className="mt-8 hidden lg:block">
+            <div className="mt-6">
               <WhatsAppButton
                 type="orcamento"
                 label={ctaLabel}
@@ -45,9 +42,9 @@ export default function ServiceHero({
           </div>
 
           {/* Image square column */}
-          <div className="flex-1 basis-0 min-w-0 flex justify-end lg:col-span-6">
-            <div className="relative w-48 h-[500] sm:w-64 md:w-72 lg:w-96 aspect-square">
-              <div className="absolute inset-0 overflow-hidden rounded-t-[80px] shadow-md">
+          <div className="flex-1 basis-0 min-w-0 lg:col-span-6 flex justify-end">
+            <div className="relative w-48 h-66 sm:w-64 sm:h-112 md:w-72 md:h-128 lg:w-96 lg:h-140 aspect-square">
+              <div className="absolute inset-0 overflow-hidden rounded-t-[500px] shadow-md">
                 <Image
                   src={imageUrl}
                   alt={imageAlt}
@@ -58,7 +55,7 @@ export default function ServiceHero({
                 />
               </div>
               {iconUrl && (
-                <div className="absolute left-[-25px] bottom-[-20px] w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden shadow-lg z-10 bg-white">
+                <div className="absolute left-[-25px] sm:left-[-60px] md:left-[-70px] lg:left-[-75px] bottom-[-20px] w-16 sm:w-24 md:w-32 lg:w-40 h-16 sm:h-24 md:h-32 lg:h-40 rounded-full overflow-hidden shadow-lg z-10 bg-white">
                   <Image
                     src={iconUrl}
                     alt={iconAlt ?? "Ícone do serviço"}
@@ -72,18 +69,8 @@ export default function ServiceHero({
           </div>
         </div>
 
-        {/* mobile text + CTA */}
-        <p className="mt-6 lg:hidden text-lg leading-8 text-foreground/80">{description}</p>
-        <div className="mt-6 lg:hidden">
-          <WhatsAppButton
-            type="orcamento"
-            label={ctaLabel}
-            unstyled
-            className="inline-flex items-center justify-center rounded-md bg-yellow-400 px-5 py-3 text-base font-semibold text-slate-900 shadow-sm transition-colors hover:bg-yellow-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400"
-          />
-        </div>
+        {/* Description removed; only CTA under title */}
       </div>
     </section>
   );
 }
-

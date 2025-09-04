@@ -63,6 +63,11 @@ export default function Navbar({ links, cta }: NavbarProps) {
         <div className="flex items-center gap-6">
           {/* Desktop menu */}
           <ul className="hidden sm:flex gap-6">
+            <li key="__home">
+              <Link href="/" className="text-foreground hover:text-yellow-400 transition-colors">
+                Início
+              </Link>
+            </li>
             {links.map((link, idx) => {
               const hasChildren = !!link.children?.length;
               if (!hasChildren) {
@@ -137,6 +142,11 @@ export default function Navbar({ links, cta }: NavbarProps) {
 
       {open && (
         <ul className="sm:hidden flex flex-col gap-2 p-4 border-t border-foreground/10 bg-white">
+          <li key="__home_mobile">
+            <Link href="/" onClick={() => setOpen(false)} className="block w-full py-2">
+              Início
+            </Link>
+          </li>
           {links.map((link) => {
             const hasChildren = !!link.children?.length;
             if (!hasChildren) {

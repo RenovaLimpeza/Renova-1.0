@@ -9,7 +9,7 @@ interface HeroProps {
 }
 
 export default function Hero({
-  title = "Limpeza Profissional de Qualidade para Sua Casa e Empresa",
+  title = "Seu Espaço, Outro Nível: Limpeza Profissional de Alto Padrão",
   description =
     "Na Renova, oferecemos um serviço completo de limpeza, com técnicas especializadas e materiais de alta qualidade. Atendemos tanto residências quanto empresas, garantindo resultados excepcionais, com preços justos e atendimento personalizado.",
   ctaLabel = "Solicitar Orçamento",
