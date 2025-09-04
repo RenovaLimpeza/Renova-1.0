@@ -6,12 +6,12 @@ import ServiceVideoSection from "@/components/ServiceVideoSection";
 const SITE = (process.env.NEXT_PUBLIC_SITE_URL || "https://renovalimpezams.com.br").replace(/\/+$/, "");
 
 export const metadata: Metadata = {
-  title: "Limpeza e Restauração de Vidros Profissionais",
+  title: "Limpeza de Vidros: Proporcionando  brilho e transparência, sem manchas.",
   description:
     "Oferecemos serviços especializados para a limpeza de vidros em residências e empresas. Desde a remoção de manchas até a restauração de vidros danificados, garantimos transparência impecável em todos os tipos de superfícies.",
   alternates: { canonical: `${SITE}/limpeza-de-vidros` },
   openGraph: {
-    title: "Limpeza e Restauração de Vidros Profissionais",
+    title: "Limpeza de Vidros: Proporcionando  brilho e transparência, sem manchas.",
     description:
       "Transparência e brilho sem manchas com técnicas seguras e produtos adequados.",
     url: `${SITE}/limpeza-de-vidros`,
@@ -21,12 +21,12 @@ export const metadata: Metadata = {
 
 export default function LimpezaDeVidrosPage() {
   const cards = [
-    { title: "Restauração de Vidros", image: "/cards/card2/img2.png" },
-    { title: "Limpeza de Vidros Temperados", image: "/cards/card1/img1.png" },
-    { title: "Limpeza de Janelas e Portas", image: "/cards/card1/img2.png" },
-    { title: "Fachadas e Vitrines", image: "/cards/card3/img1.png" },
-    { title: "Remoção de Manchas e Marcas d'água", image: "/cards/card4/img1.png" },
-    { title: "Manutenção e Proteção de Vidros", image: "/cards/card3/img2.png" },
+    { title: "Box de Banheiro", image: "/cards/card2/img2.png" },
+    { title: "Fachadas de Vidro", image: "/cards/card1/img1.png" },
+    { title: "Janelas", image: "/cards/card1/img2.png" },
+    { title: "Portas de Vidro", image: "/cards/card3/img1.png" },
+    { title: "Vitrines", image: "/cards/card4/img1.png" },
+    { title: "Painéis de Vidro", image: "/cards/card3/img2.png" },
   ];
 
   const jsonLd = {
@@ -48,8 +48,8 @@ export default function LimpezaDeVidrosPage() {
   return (
     <main className="bg-white">
       <ServiceHero
-        title="Limpeza e Restauração de Vidros Profissionais"
-        description="Oferecemos serviços especializados para a limpeza de vidros em residências e empresas. Desde a remoção de manchas até a restauração de vidros danificados, garantimos uma transparência impecável em todos os tipos de superfícies."
+        title="Limpeza Especializada"
+        description="Oferecemos serviços especializados de limpeza ,restauração e impermeabilização de vidros, garantindo um acabamento impecável e a máxima transparência para janelas, fachadas e outros elementos de vidro."
         ctaLabel="Solicitar Orçamento"
         imageUrl="/geral/hero-vidros.png"
         imageAlt="Vidros transparentes e sem manchas após limpeza"

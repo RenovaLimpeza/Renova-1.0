@@ -21,12 +21,12 @@ export const metadata: Metadata = {
 
 export default function LimpezaPosObraPage() {
   const cards = [
-    { title: "Remoção de Resíduos de Construção", image: "/cards/card4/img1.png" },
-    { title: "Limpeza de Pisos e Superfícies", image: "/cards/card1/img1.png" },
-    { title: "Organização do Ambiente", image: "/cards/card4/img2.png" },
-    { title: "Limpeza de Vidros Pós-Obra", image: "/cards/card2/img1.png" },
-    { title: "Remoção de Poeira e Detritos", image: "/cards/card3/img2.png" },
-    { title: "Acabamento Final e Preparação", image: "/cards/card1/img2.png" },
+    { title: "Casas", image: "/cards/card4/img1.png" },
+    { title: "Apartamentos", image: "/cards/card1/img1.png" },
+    { title: "Empresas", image: "/cards/card4/img2.png" },
+    { title: "Chácaras", image: "/cards/card2/img1.png" },
+    { title: "Espaços", image: "/cards/card3/img2.png" },
+    { title: "Comércios", image: "/cards/card1/img2.png" },
   ];
 
   const jsonLd = {
@@ -53,13 +53,13 @@ export default function LimpezaPosObraPage() {
         ctaLabel="Solicitar Orçamento"
         imageUrl="/geral/hero-pos-obra.png"
         imageAlt="Ambiente limpo e organizado após obra"
-        iconUrl="/icons/icone-pos-obra.png"
+        iconUrl="/icons/hero-icone-pos-obra.jpeg"
         iconAlt="Ícone de limpeza pós-obra"
       />
 
       <ServiceCards
-        title="Pós-obra sem complicações"
-        description="Remoção de resíduos, limpeza detalhada de pisos e superfícies e acabamento final para deixar seu ambiente pronto para uso."
+        title="Limpeza Especializada"
+        description="Oferecemos serviços especializados de limpeza pós-obra, removendo resíduos e sujeiras de construção, garantindo um ambiente limpo, organizado e pronto para uso, seja casas ou até em empresas."
         items={cards}
       />
 

@@ -6,7 +6,7 @@ import ServiceVideoSection from "@/components/ServiceVideoSection";
 const SITE = (process.env.NEXT_PUBLIC_SITE_URL || "https://renovalimpezams.com.br").replace(/\/+$/, "");
 
 export const metadata: Metadata = {
-  title: "Limpeza Profunda de Pisos: Cerâmica, Porcelanato, Mármore e Granito",
+  title: "Limpeza de Pisos: Restauração e brilho, com um acabamento impecável.",
   description:
     "Técnicas profissionais para limpeza e restauração de pisos de cerâmica, porcelanato, mármore e granito. Polimento, remoção de manchas e enceramento.",
   alternates: { canonical: `${SITE}/limpeza-de-pisos` },
@@ -21,12 +21,12 @@ export const metadata: Metadata = {
 
 export default function LimpezaDePisosPage() {
   const cards = [
-    { title: "Polimento de Cerâmica", image: "/cards/card1/img1.png" },
-    { title: "Restaurando Pisos de Mármore", image: "/cards/card3/img1.png" },
-    { title: "Técnicas de Enceramento", image: "/cards/card4/img2.png" },
-    { title: "Limpeza de Porcelanato", image: "/cards/card1/img2.png" },
-    { title: "Remoção de Manchas", image: "/cards/card3/img2.png" },
-    { title: "Proteção e Brilho", image: "/cards/card4/img1.png" },
+    { title: "Borda de Piscina", image: "/cards/card1/img1.png" },
+    { title: "Calçadas", image: "/cards/card3/img1.png" },
+    { title: "Pisos Internos", image: "/cards/card4/img2.png" },
+    { title: "Pisos Externos", image: "/cards/card1/img2.png" },
+    { title: "Pedras", image: "/cards/card3/img2.png" },
+    { title: "Fachadas", image: "/cards/card4/img1.png" },
   ];
 
   const jsonLd = {
@@ -48,18 +48,18 @@ export default function LimpezaDePisosPage() {
   return (
     <main className="bg-white">
       <ServiceHero
-        title="Limpeza Profunda de Pisos: Cerâmica, Porcelanato, Mármore e Granito"
+        title="Limpeza de Pisos: Restauração e brilho, com um acabamento impecável."
         description="Tratamento profissional para diferentes tipos de pisos com polimento, remoção de manchas, proteção e brilho duradouro."
         ctaLabel="Solicitar Orçamento"
-        imageUrl="/geral/hero-vidros.png"
+        imageUrl="/geral/hero-pisos.png"
         imageAlt="Piso restaurado e brilhante após limpeza"
-        iconUrl="/icons/icone-pisos.png"
+        iconUrl="/icons/hero-icone-pisos.jpeg"
         iconAlt="Ícone de limpeza de pisos"
       />
 
       <ServiceCards
-        title="Cuidado profissional com seus pisos"
-        description="Aplicamos técnicas específicas para cada material, garantindo limpeza segura e resultados de alto padrão."
+        title="Limpeza Especializada"
+        description="Oferecemos serviços especializados de limpeza, restauração e proteção de pisos, cuidando de cada detalhe para garantir brilho, durabilidade e aparência impecável para cerâmica, porcelanato, mármore e outros tipos de revestimentos."
         items={cards}
       />
 
