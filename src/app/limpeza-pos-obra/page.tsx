@@ -21,12 +21,12 @@ export const metadata: Metadata = {
 
 export default function LimpezaPosObraPage() {
   const cards = [
-    { title: "Casas", image: "/cards/card4/img1.png" },
-    { title: "Apartamentos", image: "/cards/card1/img1.png" },
-    { title: "Empresas", image: "/cards/card4/img2.png" },
-    { title: "Chácaras", image: "/cards/card2/img1.png" },
-    { title: "Espaços", image: "/cards/card3/img2.png" },
-    { title: "Comércios", image: "/cards/card1/img2.png" },
+    { title: "Casas", image: "/cards/cards-pos-obra/casa.png" },
+    { title: "Apartamentos", image: "/cards/cards-pos-obra/apartamento.png" },
+    { title: "Empresas", image: "/cards/cards-pos-obra/empresa.png" },
+    { title: "Chácaras", image: "/cards/cards-pos-obra/chacara.png" },
+    { title: "Espaços", image: "/cards/cards-pos-obra/espaco.png" },
+    { title: "Comércios", image: "/cards/cards-pos-obra/comercio.png" },
   ];
 
   const jsonLd = {
@@ -53,7 +53,7 @@ export default function LimpezaPosObraPage() {
         ctaLabel="Solicitar Orçamento"
         imageUrl="/geral/hero-pos-obra.png"
         imageAlt="Ambiente limpo e organizado após obra"
-        iconUrl="/icons/hero-icone-pos-obra.jpeg"
+        iconUrl="/icons/hero-icone-pos-obra.jpg"
         iconAlt="Ícone de limpeza pós-obra"
       />
 

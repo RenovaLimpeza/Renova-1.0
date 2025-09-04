@@ -21,12 +21,12 @@ export const metadata: Metadata = {
 
 export default function LimpezaDePisosPage() {
   const cards = [
-    { title: "Borda de Piscina", image: "/cards/card1/img1.png" },
-    { title: "Calçadas", image: "/cards/card3/img1.png" },
-    { title: "Pisos Internos", image: "/cards/card4/img2.png" },
-    { title: "Pisos Externos", image: "/cards/card1/img2.png" },
-    { title: "Pedras", image: "/cards/card3/img2.png" },
-    { title: "Fachadas", image: "/cards/card4/img1.png" },
+    { title: "Borda de Piscina", image: "/cards/cards-pisos/borda.png" },
+    { title: "Calçadas", image: "/cards/cards-pisos/calcada.png" },
+    { title: "Pisos Internos", image: "/cards/cards-pisos/interno.png" },
+    { title: "Pisos Externos", image: "/cards/cards-pisos/externo.png" },
+    { title: "Pedras", image: "/cards/cards-pisos/pedra.png" },
+    { title: "Fachadas", image: "/cards/cards-pisos/fachada.png" },
   ];
 
   const jsonLd = {

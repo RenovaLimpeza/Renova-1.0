@@ -21,12 +21,12 @@ export const metadata: Metadata = {
 
 export default function LimpezaDeVidrosPage() {
   const cards = [
-    { title: "Box de Banheiro", image: "/cards/card2/img2.png" },
-    { title: "Fachadas de Vidro", image: "/cards/card1/img1.png" },
-    { title: "Janelas", image: "/cards/card1/img2.png" },
-    { title: "Portas de Vidro", image: "/cards/card3/img1.png" },
-    { title: "Vitrines", image: "/cards/card4/img1.png" },
-    { title: "Painéis de Vidro", image: "/cards/card3/img2.png" },
+    { title: "Box de Banheiro", image: "/cards/cards-vidros/box.png" },
+    { title: "Fachadas de Vidro", image: "/cards/cards-vidros/fachada.png" },
+    { title: "Janelas", image: "/cards/cards-vidros/janela.png" },
+    { title: "Portas de Vidro", image: "/cards/cards-vidros/porta.png" },
+    { title: "Vitrines", image: "/cards/cards-vidros/vitrine.png" },
+    { title: "Esquadria de Vidro", image: "/cards/cards-vidros/esquadria.png" },
   ];
 
   const jsonLd = {
@@ -48,7 +48,7 @@ export default function LimpezaDeVidrosPage() {
   return (
     <main className="bg-white">
       <ServiceHero
-        title="Limpeza Especializada"
+        title="Limpeza de Vidros: Proporcionando  brilho e transparência, sem manchas."
         description="Oferecemos serviços especializados de limpeza ,restauração e impermeabilização de vidros, garantindo um acabamento impecável e a máxima transparência para janelas, fachadas e outros elementos de vidro."
         ctaLabel="Solicitar Orçamento"
         imageUrl="/geral/hero-vidros.png"
