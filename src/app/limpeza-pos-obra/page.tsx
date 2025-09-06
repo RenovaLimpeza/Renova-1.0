@@ -71,11 +71,11 @@ export default function LimpezaPosObraPage() {
       />
 
       <ServiceVideoSection
-        title="Transforme seu ambiente após a reforma"
-        subtitleLeftTitle="Detalhamento completo"
-        subtitleLeftText="Remoção minuciosa de detritos e poeira, limpeza de cantos, rodapés, portas e janelas para acabamento impecável."
-        subtitleRightTitle="Espaços limpos e organizados"
-        subtitleRightText="Entrega do ambiente pronto para uso, com higienização, organização e brilho que valorizam seu investimento."
+        title="Se busca um tratamento de excelência pós-obra, conte com a Renova!"
+        subtitleLeftTitle="Atendimento Personalizado"
+        subtitleLeftText="Adaptamos nossos serviços às suas necessidades, oferecendo soluções sob medida."
+        subtitleRightTitle="Trabalho Eficaz"
+        subtitleRightText="Somos comprometidos em entregar resultados rápidos e de alta qualidade, sem comprometer a eficiência."
         videoSrc="/videos/pos-obra.mp4"
         posterSrc="/renova.png"
       />

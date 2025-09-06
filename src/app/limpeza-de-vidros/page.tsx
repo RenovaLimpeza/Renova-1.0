@@ -64,17 +64,17 @@ export default function LimpezaDeVidrosPage() {
       />
 
       <ServiceCards
-        title="Vidros limpos, restaurados e protegidos"
-        description="Atendemos janelas, portas, vitrines e fachadas. Foco em transparência, remoção de manchas e proteção para resultado duradouro."
+        title="Limpeza Especializadas"
+        description="Oferecemos serviços especializados de limpeza ,restauração e impermeabilização de vidros, garantindo um acabamento impecável e a máxima transparência para janelas, fachadas e outros elementos de vidro."
         items={cards}
       />
 
       <ServiceVideoSection
-        title="Transparência impecável em todos os ambientes"
-        subtitleLeftTitle="Produtos especiais para vidros"
-        subtitleLeftText="Soluções que não deixam resíduos e realçam a transparência, preservando a integridade do material."
-        subtitleRightTitle="Técnicas seguras e eficazes"
-        subtitleRightText="Procedimentos que removem manchas e marcas d'água sem riscar, garantindo brilho duradouro."
+        title="Se busca um tratamento de excelência para seus vidros, conte com a Renova!"
+        subtitleLeftTitle="Atendimento Personalizado"
+        subtitleLeftText="Adaptamos nossos serviços às suas necessidades, oferecendo soluções sob medida."
+        subtitleRightTitle="Trabalho Eficaz"
+        subtitleRightText="Somos comprometidos em entregar resultados rápidos e de alta qualidade, sem comprometer a eficiência."
         videoSrc="/videos/vidro.mp4"
         posterSrc="/renova.png"
       />

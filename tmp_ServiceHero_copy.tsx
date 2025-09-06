@@ -25,13 +25,20 @@ export default function ServiceHero({
   return (
     <section className="bg-gradient-to-r from-[#DAEAFE] to-white">
       <div className="mx-auto max-w-7xl px-6 py-16 sm:py-12 lg:px-8">
-        <div className="flex flex-row lg:flex-row items-center gap-6 lg:gap-10">
+        <div className="flex lg:grid flex-row items-center gap-6 lg:gap-10 lg:grid-cols-12">
           {/* Text column */}
           <div className="flex-1 basis-0 min-w-0 lg:col-span-6">
-            <h1 className="text-2xl font-bold tracking-tight text-foreground sm:text-5xl">
+            <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl">
               {title}
             </h1>
-            
+            <div className="mt-6">
+              <WhatsAppButton
+                type="orcamento"
+                label={ctaLabel}
+                unstyled
+                className="inline-flex items-center justify-center rounded-md bg-yellow-400 px-5 py-3 text-base font-semibold text-slate-900 shadow-sm transition-colors hover:bg-yellow-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400"
+              />
+            </div>
           </div>
 
           {/* Image square column */}
@@ -62,16 +69,9 @@ export default function ServiceHero({
           </div>
         </div>
 
-        {/* CTA below title + image */}
-        <div className="mt-8">
-          <WhatsAppButton
-            type="orcamento"
-            label={ctaLabel}
-            unstyled
-            className="inline-flex items-center justify-center rounded-md bg-yellow-400 px-5 py-3 text-base font-semibold text-slate-900 shadow-sm transition-colors hover:bg-yellow-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400"
-          />
-        </div>
+        {/* Description removed; only CTA under title */}
       </div>
     </section>
   );
 }
+

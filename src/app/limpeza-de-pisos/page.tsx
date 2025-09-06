@@ -70,11 +70,11 @@ export default function LimpezaDePisosPage() {
       />
 
       <ServiceVideoSection
-        title="Revitalize Seus Pisos"
-        subtitleLeftTitle="Técnicas de Restauração"
-        subtitleLeftText="Processos de polimento, remoção de riscos, limpeza profunda de rejuntes e finalização adequada."
-        subtitleRightTitle="Durabilidade Garantida"
-        subtitleRightText="Indicação do tratamento correto e aplicação de proteção para manter o brilho por mais tempo."
+        title="Se busca um tratamento de excelência para seus pisos, conte com a Renova!"
+        subtitleLeftTitle="Atendimento Personalizado"
+        subtitleLeftText="Adaptamos nossos serviços às suas necessidades, oferecendo soluções sob medida."
+        subtitleRightTitle="Trabalho Eficaz"
+        subtitleRightText="Somos comprometidos em entregar resultados rápidos e de alta qualidade, sem comprometer a eficiência."
         videoSrc="/videos/piso.mp4"
         posterSrc="/renova.png"
       />
