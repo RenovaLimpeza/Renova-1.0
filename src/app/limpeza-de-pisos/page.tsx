@@ -17,6 +17,12 @@ export const metadata: Metadata = {
     url: `${SITE}/limpeza-de-pisos`,
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Limpeza de Pisos: Restauração e brilho, com um acabamento impecável.",
+    description:
+      "Cerâmica, porcelanato, mármore e granito com técnicas de polimento, restauração e proteção.",
+  },
 };
 
 export default function LimpezaDePisosPage() {
@@ -69,6 +75,7 @@ export default function LimpezaDePisosPage() {
         subtitleLeftText="Processos de polimento, remoção de riscos, limpeza profunda de rejuntes e finalização adequada."
         subtitleRightTitle="Durabilidade Garantida"
         subtitleRightText="Indicação do tratamento correto e aplicação de proteção para manter o brilho por mais tempo."
+        videoSrc="/videos/piso.mp4"
         posterSrc="/renova.png"
       />
 

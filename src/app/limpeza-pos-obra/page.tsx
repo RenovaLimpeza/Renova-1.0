@@ -17,6 +17,13 @@ export const metadata: Metadata = {
     url: `${SITE}/limpeza-pos-obra`,
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Limpeza Pós-Obra: Transformamos seu espaço, eliminando todo o resíduo da construção.",
+    description:
+      "Remoção de resíduos, limpeza detalhada e acabamento final para ambientes prontos para uso.",
+  },
 };
 
 export default function LimpezaPosObraPage() {
@@ -69,6 +76,7 @@ export default function LimpezaPosObraPage() {
         subtitleLeftText="Remoção minuciosa de detritos e poeira, limpeza de cantos, rodapés, portas e janelas para acabamento impecável."
         subtitleRightTitle="Espaços limpos e organizados"
         subtitleRightText="Entrega do ambiente pronto para uso, com higienização, organização e brilho que valorizam seu investimento."
+        videoSrc="/videos/pos-obra.mp4"
         posterSrc="/renova.png"
       />
 

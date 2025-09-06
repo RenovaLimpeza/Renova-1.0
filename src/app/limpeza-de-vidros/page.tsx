@@ -17,6 +17,12 @@ export const metadata: Metadata = {
     url: `${SITE}/limpeza-de-vidros`,
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Limpeza de Vidros: Proporcionando brilho e transparência, sem manchas.",
+    description:
+      "Transparência e brilho sem manchas com técnicas seguras e produtos adequados.",
+  },
 };
 
 export default function LimpezaDeVidrosPage() {
@@ -53,7 +59,7 @@ export default function LimpezaDeVidrosPage() {
         ctaLabel="Solicitar Orçamento"
         imageUrl="/geral/hero-vidros.png"
         imageAlt="Vidros transparentes e sem manchas após limpeza"
-        iconUrl="/geral/hero-icon-vidros.jpeg"
+        iconUrl="/icons/hero-icon-vidros.jpeg"
         iconAlt="Ícone de limpeza de vidros"
       />
 
@@ -69,6 +75,7 @@ export default function LimpezaDeVidrosPage() {
         subtitleLeftText="Soluções que não deixam resíduos e realçam a transparência, preservando a integridade do material."
         subtitleRightTitle="Técnicas seguras e eficazes"
         subtitleRightText="Procedimentos que removem manchas e marcas d'água sem riscar, garantindo brilho duradouro."
+        videoSrc="/videos/vidro.mp4"
         posterSrc="/renova.png"
       />
 

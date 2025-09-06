@@ -113,7 +113,7 @@ function Card({ item, hideBadge = false }: { item: GalleryItem; hideBadge?: bool
             type="button"
             aria-label="Anterior"
             onClick={goPrev}
-            className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-black/40 p-2 text-white drop-shadow-md backdrop-blur transition-colors hover:bg-black/50"
+            className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-black/10 p-2 text-white drop-shadow-md backdrop-blur transition-colors hover:bg-black/50"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
               <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
@@ -123,7 +123,7 @@ function Card({ item, hideBadge = false }: { item: GalleryItem; hideBadge?: bool
             type="button"
             aria-label="Próximo"
             onClick={goNext}
-            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-black/40 p-2 text-white drop-shadow-md backdrop-blur transition-colors hover:bg-black/50"
+            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-black/10 p-2 text-white drop-shadow-md backdrop-blur transition-colors hover:bg-black/50"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
               <path d="m10 6-1.41 1.41L13.17 12l-4.58 4.59L10 18l6-6z" />

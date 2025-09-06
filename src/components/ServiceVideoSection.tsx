@@ -8,6 +8,7 @@ interface ServiceVideoSectionProps {
   subtitleRightTitle: string;
   subtitleRightText: string;
   videoSrc?: string; // optional, can be empty and we show a placeholder image
+  embedUrl?: string; // optional, supports iframe embeds (e.g., Google Drive)
   posterSrc?: string;
 }
 
@@ -19,17 +20,28 @@ export default function ServiceVideoSection({
   subtitleRightTitle,
   subtitleRightText,
   videoSrc,
+  embedUrl,
   posterSrc = "/renova.png",
 }: ServiceVideoSectionProps) {
   return (
-    <section id={id} className="bg-[#EFF5FF] py-16 sm:py-20">
+    <section id={id} className="bg-[#FFF9E6] py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2">
           <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow">
-            {videoSrc ? (
+            {embedUrl ? (
+              <iframe
+                src={embedUrl}
+                className="w-full h-full"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+              />
+            ) : videoSrc ? (
               <video
                 controls
+                preload="metadata"
+                playsInline
                 poster={posterSrc}
+                aria-label={title}
                 className="w-full h-full object-cover"
               >
                 <source src={videoSrc} />
@@ -52,11 +64,11 @@ export default function ServiceVideoSection({
               {title}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="bg-white rounded-lg p-5 shadow">
+              <div className="rounded-lg p-5">
                 <h3 className="text-lg font-semibold text-foreground">{subtitleLeftTitle}</h3>
                 <p className="mt-2 text-foreground/80">{subtitleLeftText}</p>
               </div>
-              <div className="bg-white rounded-lg p-5 shadow">
+              <div className="rounded-lg p-5">
                 <h3 className="text-lg font-semibold text-foreground">{subtitleRightTitle}</h3>
                 <p className="mt-2 text-foreground/80">{subtitleRightText}</p>
               </div>
@@ -67,4 +79,3 @@ export default function ServiceVideoSection({
     </section>
   );
 }
-
